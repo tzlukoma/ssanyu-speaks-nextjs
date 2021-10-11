@@ -71,7 +71,7 @@ export default function Nav() {
                 id="menu"
             >
                 <nav>
-                    <ul className="items-center justify-between p-5 text-base lg:flex " style={{ lineHeight: "5.5rem" }}>
+                    <ul className="items-center justify-between p-5 text-base lg:flex " style={{ lineHeight: "4.5rem" }}>
                         {links.map((link) => {
                             return (
                                 <li key={link.link} onClick={() => manageMenu()} >

@@ -1,11 +1,9 @@
 import React from 'react'
 
-function Footer() {
+export default function Footer() {
     return (
-        <footer className="mt-20">
-            Footer
+        <footer className="px-5">
+            <h5 className=" text-center">© Sentheia Loren McLeod 2021</h5>
         </footer>
     )
 }
-
-export default Footer
