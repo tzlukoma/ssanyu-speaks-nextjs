@@ -32,6 +32,9 @@ export default function Nav() {
         } else return;
     }
 
+    const customLoader = (src) => {
+        return src
+    }
 
 
     return (
