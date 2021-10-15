@@ -42,8 +42,10 @@ export default function HomePage({ siteSettings }) {
 						alt="brand logo"
 					/>
 				</div>
-				<div className="col-start-4 col-span-4 row-start-1 row-span-3 text-white z-10 pt-5 text-lg xl:text-4xl">
-					<p>There is a celebration</p>
+				<div className="hidden sm:block relative col-start-1 col-span-10 row-start-1 row-span-4 bg-black bg-opacity-40 z-20">
+				</div>
+				<div className="bg-black bg-opacity-60 col-start-4 col-span-4 row-start-1 row-span-3 text-white z-30 p-5 text-lg xl:text-4xl ">
+					<p className="leading-loose">There is a celebration</p>
 					<p>and the celebration is my dance</p>
 				</div>
 				<div className="bg-transaparent col-start-4 col-span-2 row-start-4 row-span-4 z-20">
@@ -59,7 +61,7 @@ export default function HomePage({ siteSettings }) {
 						alt="brand logo"
 					/>
 				</div>
-				<div className="bg-yellow-50 col-start-6 col-span-2 row-start-4 row-span-4 z-20 rounded-xl overflow-hidden w-100">
+				<div className=" col-start-6 col-span-2 row-start-4 row-span-4 z-20 rounded-xl overflow-hidden w-100">
 					{' '}
 					<Image
 						src={urlFor(siteSettings[0].authorImage)
@@ -67,18 +69,20 @@ export default function HomePage({ siteSettings }) {
 							.auto('format')
 							.url()}
 						layout="responsive"
+						width={500}
+						height={750}
 						sizes="50vw"
 						objectFit="contain"
 						alt="brand logo"
 					/>
 				</div>
 				<div></div>
-				<div className="bg-white col-start-4 col-span-2 row-start-6 row-span-1 z-20">
+				{/* <div className="bg-white col-start-4 col-span-2 row-start-6 row-span-1 z-20">
 					Author CTA
 				</div>
 				<div className="bg-white col-start-6 col-span-2 row-start-6 row-span-1 z-20">
 					Book CTA
-				</div>
+				</div> */}
 				<div className="bg-white col-start-4 col-span-4 row-start-7 row-span-1 z-30">
 					Subscribe box
 				</div>
