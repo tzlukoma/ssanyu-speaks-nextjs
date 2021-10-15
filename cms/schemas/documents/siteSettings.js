@@ -27,5 +27,21 @@ export default {
 				hotspot: true,
 			},
 		},
+		{
+			title: 'Book Image',
+			name: 'bookImage',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+		},
+		{
+			title: 'Author Image',
+			name: 'authorImage',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+		},
 	],
 };
