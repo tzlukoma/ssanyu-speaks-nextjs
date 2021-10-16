@@ -112,11 +112,11 @@ export default function HomePage({ siteSettings, events }) {
 						)}
 					</div>
 				</section>
-				<section className='m-auto flex items-center justify-center'>
+				{/* <section className='m-auto flex items-center justify-center'>
 					<div className=''>
 						<Subscribe />
 					</div>
-				</section>
+				</section> */}
 			</main>
 		</div>
 	)

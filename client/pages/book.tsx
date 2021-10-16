@@ -8,8 +8,8 @@ function BookPage({ siteSettings }) {
     console.log(siteSettings)
     const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
     return (
-        <div className="w-2/3 lg:w-2/2 m-auto grid lg:grid-cols-2 grid-cols-1 lg:grid-rows-2 gap-1 p-5 font-sans">
-            <div className="row-start-1 row-end-1">
+        <div className="w-2/3 lg:w-2/2 m-auto grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-1 p-5 font-sans">
+            <div className="">
 
                 <Image
                     {...bookImageProps}
