@@ -11,7 +11,6 @@ import { Children } from 'react'
 import CustomLink from '../components/CustomLink'
 
 export default function HomePage({ siteSettings, events }) {
-	console.log(events)
 	const heroImageProps = useNextSanityImage(client, siteSettings[0].heroImage)
 	const heroImageMobileProps = useNextSanityImage(
 		client,
@@ -22,8 +21,6 @@ export default function HomePage({ siteSettings, events }) {
 		client,
 		siteSettings[0].authorImage
 	)
-	console.log(siteSettings[0].heroImage)
-	console.log(urlFor(siteSettings[0].heroImage).url())
 	return (
 		<div className='content-center font-body'>
 			<Head>

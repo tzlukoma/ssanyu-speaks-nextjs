@@ -21,7 +21,6 @@ function Subscribe() {
 		});
 
 		const response = await res.json();
-		console.log(response);
 
 		if (response.error) {
 			// 4. If there was an error, update the message in state.
