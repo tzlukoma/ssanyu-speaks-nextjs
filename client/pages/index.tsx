@@ -73,7 +73,7 @@ export default function HomePage({ siteSettings }) {
 					About the author
 				</div>
 				<div className="bg-white col-start-4 col-span-4 row-start-8 row-span-1 z-40">
-					Subscribe box goes here
+					Subscribe box goes here again
 				</div>
 			</main>
 		</div>
