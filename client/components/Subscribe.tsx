@@ -35,8 +35,8 @@ function Subscribe() {
 	};
 
 	return (
-		<div className="bg-white p-8 md:p-10 lg:p-16 rounded shadow-lg w-full mb-10">
-			<h2 className="font-sans text-xl font-bold sm:text-2xl xl:text-3xl 2xl:text-4xl mb-3 xl:mb-5 md:mb-10">{`Sign up for updates on what I'm up to`}</h2>
+		<div className="bg-white p-8 md:p-10 lg:p-16 rounded shadow-lg w-full mb-10 border-2 border-gray-200 ">
+			<h2 className="font-sans text-xl font-bold sm:text-2xl xl:text-2xl 2xl:text-4xl mb-3 xl:mb-5 md:mb-10">{`Sign up for updates on what I'm up to`}</h2>
 			<form className="space-y-3 xl:space-y-5 xl:text-xl 2xl:text-2xl">
 				<label className="block mb-1 font-bold text-gray-500 ">Email Address</label>
 				<input
