@@ -80,7 +80,7 @@ export default function HomePage({ siteSettings, events }) {
 					<div>
 						{events?.length > 0 ? (
 							events?.slice(-2).map((event: any) => (
-								<div key={event._id} className='space-y-2 my-4 p-5 bg-blue-50'>
+								<div key={event._id} className='space-y-2 my-4 p-5 bg-blue-50 rounded-xl'>
 									<h2 className='font-sans py-4 text-3xl text-primary-400 '>
 										{event?.title}
 									</h2>
@@ -95,7 +95,7 @@ export default function HomePage({ siteSettings, events }) {
 											borderBottom={false}
 											active={false}
 										>
-											<button className='bg-primary-400 hover:bg-primary-600 text-white font-bold py-2 px-4 mt-4 rounded-full uppercase'>
+											<button className='bg-primary-400 hover:bg-primary-600 text-white font-bold py-2 px-4 mt-4 rounded-lg uppercase'>
 												Register
 											</button>
 										</CustomLink>
@@ -109,11 +109,6 @@ export default function HomePage({ siteSettings, events }) {
 						)}
 					</div>
 				</section>
-				{/* <section className='m-auto flex items-center justify-center'>
-					<div className=''>
-						<Subscribe />
-					</div>
-				</section> */}
 			</main>
 		</div>
 	)
