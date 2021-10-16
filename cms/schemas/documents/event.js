@@ -21,20 +21,9 @@ export default {
 			},
 		},
 		{
-			title: 'Synopsis',
-			name: 'synopsis',
-
-			type: 'blockContent',
-		},
-		{
-			title: 'Video Link',
-			name: 'videoUrl',
-			type: 'url',
-		},
-		{
-			title: 'Registration Link',
-			name: 'registerUrl',
-			type: 'url',
+			title: 'Location',
+			name: 'location',
+			type: 'string',
 		},
 		{
 			title: 'Slug',
@@ -43,6 +32,22 @@ export default {
 			options: {
 				source: 'title',
 			},
+		},
+		{
+			title: 'Synopsis',
+			name: 'synopsis',
+
+			type: 'blockContent',
+		},
+		{
+			title: 'Registration Link',
+			name: 'registrationUrl',
+			type: 'url',
+		},
+		{
+			title: 'Video Link',
+			name: 'videoUrl',
+			type: 'url',
 		},
 
 		{
