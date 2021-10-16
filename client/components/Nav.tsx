@@ -12,14 +12,14 @@ export default function Nav() {
             name: 'Home',
             link: '/',
         },
-        {
-            name: 'Book',
-            link: '/book',
-        },
-        {
-            name: 'About',
-            link: '/about',
-        },
+        // {
+        //     name: 'Book',
+        //     link: '/book',
+        // },
+        // {
+        //     name: 'About',
+        //     link: '/about',
+        // },
     ];
 
     function handleMenuClick() {
