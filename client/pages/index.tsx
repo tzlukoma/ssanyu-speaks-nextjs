@@ -2,11 +2,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { client, urlFor } from '../lib/sanity';
+import { useNextSanityImage } from 'next-sanity-image'
 import groq from 'groq';
 import Subscribe from '../components/Subscribe';
 import { Children } from 'react';
 
 export default function HomePage({ siteSettings }) {
+	const heroImageProps = useNextSanityImage(client, siteSettings[0].heroImage)
+	const heroImageMobileProps = useNextSanityImage(client, siteSettings[0].heroImageMobile)
+	const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
+	const authorImageProps = useNextSanityImage(client, siteSettings[0].authorImage)
 	console.log(siteSettings[0].heroImage);
 	console.log(urlFor(siteSettings[0].heroImage).url());
 	return (
@@ -20,70 +25,54 @@ export default function HomePage({ siteSettings }) {
 			<main className="grid grid-cols-10 grid-rows-8 gap-4 mb-10">
 				<div className="sm:hidden relative">
 					<Image
-						src={urlFor(siteSettings[0].heroImageMobile)
-							.fit('crop')
-							.auto('format')
-							.url()}
-						width={972}
-						height={452}
+						{...heroImageMobileProps}
+						sizes="(max-width: 800px) 100vw, 800px"
 						layout="responsive"
 						alt="brand logo"
 					/>
 				</div>
 				<div className="hidden sm:block relative col-start-1 col-span-10 row-start-1 row-span-4">
 					<Image
-						src={urlFor(siteSettings[0].heroImage)
-							.fit('crop')
-							.auto('format')
-							.url()}
-						width={1440}
-						height={371}
+						{...heroImageProps}
+						sizes="(max-width: 1440px) 100vw, 1440px"
 						layout="responsive"
 						alt="brand logo"
 					/>
 				</div>
-				<div className="hidden sm:block relative col-start-1 col-span-10 row-start-1 row-span-4 bg-black bg-opacity-40 z-20">
+				<div className="hidden sm:block relative col-start-1 col-span-10 row-start-1 row-span-3 bg-black bg-opacity-40 z-20">
 				</div>
-				<div className="bg-black bg-opacity-60 col-start-4 col-span-4 row-start-1 row-span-3 text-white z-30 p-5 text-lg xl:text-4xl ">
+				<div className="bg-black bg-opacity-60 col-start-4 col-span-4 row-start-1 row-span-3 text-white z-30 mb-4 p-3 md:p-5 text-sm xl:text-4xl ">
 					<p className="leading-loose">There is a celebration</p>
 					<p>and the celebration is my dance</p>
 				</div>
-				<div className="bg-transaparent col-start-4 col-span-2 row-start-4 row-span-4 z-20">
+				<div className="bg-transaparent col-start-4 col-span-2 md:mt-2 xl:mt-5 row-start-3 md:row-start-4 row-span-4 z-30">
 					{' '}
 					<Image
-						src={urlFor(siteSettings[0].bookImage)
-							.fit('crop')
-							.auto('format')
-							.url()}
-						width={650}
-						height={950}
+						{...bookImageProps}
+						sizes="(max-width: 650px) 100vw, 650px"
 						layout="responsive"
 						alt="brand logo"
 					/>
 				</div>
-				<div className=" col-start-6 col-span-2 row-start-4 row-span-4 z-20 rounded-xl overflow-hidden w-100">
+				<div className="bg-white col-start-6 col-span-2 md:mt-2 xl:mt-10 row-start-3 md:row-start-4 row-span-3 z-30 rounded-xl overflow-hidden w-100 shadow-lg">
 					{' '}
 					<Image
-						src={urlFor(siteSettings[0].authorImage)
-							.fit('crop')
-							.auto('format')
-							.url()}
+						{...authorImageProps}
+						sizes="(max-width: 600px) 100vw, 600px"
 						layout="responsive"
-						width={500}
-						height={750}
-						sizes="50vw"
-						objectFit="contain"
 						alt="brand logo"
 					/>
 				</div>
-				<div></div>
-				{/* <div className="bg-white col-start-4 col-span-2 row-start-6 row-span-1 z-20">
-					Author CTA
+				<div></div><Link href="/book" passHref>
+					<div className="bg-white opacity-90 hover:bg-primary-400 hover:text-white col-start-4 col-span-2 row-start-6 row-span-2 z-40 text-center pt-3">
+						About the book
+
+
+					</div></Link>
+				<div className="bg-white opacity-90 hover:bg-primary-400 hover:text-white col-start-6 col-span-2 row-start-6 row-span-2 z-40 text-center pt-3">
+					About the author
 				</div>
-				<div className="bg-white col-start-6 col-span-2 row-start-6 row-span-1 z-20">
-					Book CTA
-				</div> */}
-				<div className="bg-white col-start-4 col-span-4 row-start-7 row-span-1 z-30">
+				<div className="bg-white col-start-4 col-span-4 row-start-8 row-span-1 z-40">
 					Subscribe box
 				</div>
 			</main>
