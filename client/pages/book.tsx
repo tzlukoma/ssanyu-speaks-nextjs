@@ -5,7 +5,6 @@ import { useNextSanityImage } from 'next-sanity-image'
 import groq from 'groq'
 
 function BookPage({ siteSettings }) {
-    console.log(siteSettings)
     const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
     return (
         <div className="w-2/3 lg:w-2/2 m-auto grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-1 p-5 font-sans">

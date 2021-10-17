@@ -11,7 +11,6 @@ import { Children } from 'react'
 import CustomLink from '../components/CustomLink'
 
 export default function HomePage({ siteSettings, events }) {
-	console.log(events)
 	const heroImageProps = useNextSanityImage(client, siteSettings[0].heroImage)
 	const heroImageMobileProps = useNextSanityImage(
 		client,
@@ -22,8 +21,6 @@ export default function HomePage({ siteSettings, events }) {
 		client,
 		siteSettings[0].authorImage
 	)
-	console.log(siteSettings[0].heroImage)
-	console.log(urlFor(siteSettings[0].heroImage).url())
 	return (
 		<div className='content-center font-body'>
 			<Head>
@@ -33,7 +30,7 @@ export default function HomePage({ siteSettings, events }) {
 			</Head>
 
 			<main>
-				<section className='grid grid-cols-10 grid-rows-4 gap-1 mb-5'>
+				<section className='sm:grid sm:grid-cols-8 md:grid-cols-10 grid-rows-4 gap-1 mb-5 p-2'>
 					<div className='sm:hidden relative'>
 						<Image
 							{...heroImageMobileProps}
@@ -51,13 +48,14 @@ export default function HomePage({ siteSettings, events }) {
 						/>
 					</div>
 					<div className='hidden sm:block relative col-start-1 col-span-10 row-start-1 row-span-2 bg-black bg-opacity-70 z-20'></div>
-					<div className='text-center col-start-3 col-span-6 row-start-1 row-span-2 font-sans  text-white z-30 lg:mb-4 p-8 lg:p-5 text-2xl xl:py-6 2xl:p-10 xl:text-4xl 2xl:text-5xl '>
+					<div className='text-center col-start-1 col-end-9 md:col-start-3 md:col-span-6 row-start-1 row-span-2 font-sans text-black  sm:text-white z-30 lg:mb-4 p-8 lg:p-5 text-2xl xl:py-6 2xl:p-10 xl:text-4xl 2xl:text-5xl '>
 						<p className='leading-loose'>There is a celebration</p>
 						<p>and the celebration is my dance</p>
 					</div>
-
-					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-transaparent col-start-3 col-span-3 lg:col-start-4 lg:col-span-2 md:mt-10 row-start-2 md:row-start-2 row-span-4 z-30'>
+					<h2 className="sm:hidden text-center text-md text-primary-400">Click on my book to learn more about it</h2>
+					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-transaparent col-start-2 col-end-5 md:col-start-3 md:col-span-3 lg:col-start-4 lg:col-span-2 md:mt-10 row-start-2 md:row-start-2 row-span-4 z-30'>
 						<Link href='/book' passHref>
+
 							<Image
 								{...bookImageProps}
 								sizes='(max-width: 650px) 100vw, 650px'
@@ -67,7 +65,8 @@ export default function HomePage({ siteSettings, events }) {
 						</Link>
 					</motion.div>
 
-					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-white col-start-6 col-span-3 lg:col-start-6 lg:col-span-2 row-start-3 md:row-start-2 md:mt-14 row-span-3 z-30 rounded-xl overflow-hidden w-100 shadow-lg '>
+					<h2 className="sm:hidden text-center text-md text-primary-400">Click on my picture to learn more about me</h2>
+					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-white col-start-5 col-end-8 md:col-start-6 md:col-span-3 lg:col-start-6 lg:col-span-2 row-start-2 mt-6 md:row-start-2 md:mt-14 row-span-3 z-30 rounded-xl overflow-hidden w-100 shadow-lg '>
 						<Link href='/about' passHref>
 							<Image
 								{...authorImageProps}
@@ -79,11 +78,11 @@ export default function HomePage({ siteSettings, events }) {
 					</motion.div>
 				</section>
 				<section className='m-auto lg:w-1/2 p-5'>
-					<h2 className='font-sans text-3xl 2xl:text-4xl '>Upcoming Events</h2>
+					<h2 className='font-sans text-3xl 2xl:text-4xl my-5 '>Upcoming Events</h2>
 					<div>
 						{events?.length > 0 ? (
 							events?.slice(-2).map((event: any) => (
-								<div key={event._id} className='space-y-2 my-4 p-5 bg-blue-50'>
+								<div key={event._id} className='space-y-2 my-4 p-5 bg-blue-50 rounded-xl'>
 									<h2 className='font-sans py-4 text-3xl text-primary-400 '>
 										{event?.title}
 									</h2>
@@ -98,7 +97,7 @@ export default function HomePage({ siteSettings, events }) {
 											borderBottom={false}
 											active={false}
 										>
-											<button className='bg-primary-400 hover:bg-primary-600 text-white font-bold py-2 px-4 mt-4 rounded-full uppercase'>
+											<button className='bg-primary-400 hover:bg-primary-600 text-white font-bold py-2 px-4 mt-4 rounded-lg uppercase'>
 												Register
 											</button>
 										</CustomLink>
@@ -112,11 +111,6 @@ export default function HomePage({ siteSettings, events }) {
 						)}
 					</div>
 				</section>
-				{/* <section className='m-auto flex items-center justify-center'>
-					<div className=''>
-						<Subscribe />
-					</div>
-				</section> */}
 			</main>
 		</div>
 	)
