@@ -9,7 +9,7 @@ import CustomLink from '../components/CustomLink'
 function BookPage({ siteSettings }) {
     const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
     return (
-        <div className="sm:w-full lg:w-2/2 m-auto grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-1 px-10 md:p-5 font-sans">
+        <div className="sm:w-full lg:w-1/2 m-auto grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-1 px-10 md:p-5 font-sans">
             <div className="">
                 <Image
                     {...bookImageProps}
