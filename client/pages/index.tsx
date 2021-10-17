@@ -30,7 +30,7 @@ export default function HomePage({ siteSettings, events }) {
 			</Head>
 
 			<main>
-				<section className='sm:grid sm:grid-cols-8 md:grid-cols-10 grid-rows-4 gap-1 mb-5'>
+				<section className='sm:grid sm:grid-cols-8 md:grid-cols-10 grid-rows-4 gap-1 mb-5 p-2'>
 					<div className='sm:hidden relative'>
 						<Image
 							{...heroImageMobileProps}
@@ -52,9 +52,10 @@ export default function HomePage({ siteSettings, events }) {
 						<p className='leading-loose'>There is a celebration</p>
 						<p>and the celebration is my dance</p>
 					</div>
-
+					<h2 className="sm:hidden text-center text-md text-primary-400">Click on my book to learn more about it</h2>
 					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-transaparent col-start-2 col-end-5 md:col-start-3 md:col-span-3 lg:col-start-4 lg:col-span-2 md:mt-10 row-start-2 md:row-start-2 row-span-4 z-30'>
 						<Link href='/book' passHref>
+
 							<Image
 								{...bookImageProps}
 								sizes='(max-width: 650px) 100vw, 650px'
@@ -64,6 +65,7 @@ export default function HomePage({ siteSettings, events }) {
 						</Link>
 					</motion.div>
 
+					<h2 className="sm:hidden text-center text-md text-primary-400">Click on my picture to learn more about me</h2>
 					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-white col-start-5 col-end-8 md:col-start-6 md:col-span-3 lg:col-start-6 lg:col-span-2 row-start-2 mt-6 md:row-start-2 md:mt-14 row-span-3 z-30 rounded-xl overflow-hidden w-100 shadow-lg '>
 						<Link href='/about' passHref>
 							<Image
