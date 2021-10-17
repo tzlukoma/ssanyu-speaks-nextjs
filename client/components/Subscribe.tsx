@@ -47,7 +47,7 @@ function MyCustomForm({ status, message, onValidated }) {
 						dangerouslySetInnerHTML={{ __html: message }}
 					/>
 				)}
-				<button className="block w-full bg-primary-400 hover:bg-primary-300 p-4 rounded text-white hover:text-white transition duration-300" onClick={submit}>{`Subscribe`}</button>
+				<button className="block w-full bg-primary-400 hover:bg-primary-300 p-4 rounded text-white hover:text-white uppercase transition duration-300" onClick={submit}>{`Subscribe`}</button>
 			</div>
 		</div>
 	);
