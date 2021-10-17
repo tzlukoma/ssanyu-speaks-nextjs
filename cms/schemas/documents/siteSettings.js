@@ -36,12 +36,22 @@ export default {
 			},
 		},
 		{
+			title: 'Book Description',
+			name: 'bookDescription',
+			type: 'blockContent',
+		},
+		{
 			title: 'Author Image',
 			name: 'authorImage',
 			type: 'image',
 			options: {
 				hotspot: true,
 			},
+		},
+		{
+			title: 'Author Bio',
+			name: 'authorBio',
+			type: 'blockContent',
 		},
 	],
 };
