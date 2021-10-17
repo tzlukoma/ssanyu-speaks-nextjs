@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { client } from '../lib/sanity'
 import { useNextSanityImage } from 'next-sanity-image'
-import { displayLocalTimeZone } from '../utils/timeFormats'
+import { displayLocalTimeZone } from '../lib/timeFormats'
 import groq from 'groq'
 import CustomLink from '../components/CustomLink'
 
@@ -50,10 +50,14 @@ export default function HomePage({ siteSettings, events }) {
 						<p className='leading-loose'>There is a celebration</p>
 						<p>and the celebration is my dance</p>
 					</div>
-					<h2 className="sm:hidden text-center text-md text-primary-400">Click on my book to learn more about it</h2>
-					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-transaparent col-start-2 col-end-5 md:col-start-3 md:col-span-3 lg:col-start-4 lg:col-span-2 md:mt-10 row-start-2 md:row-start-2 row-span-4 z-30'>
+					<h2 className='sm:hidden text-center text-md text-primary-400'>
+						Click on my book to learn more about it
+					</h2>
+					<motion.div
+						whileHover={{ scale: 1.1 }}
+						className='cursor-pointer bg-transaparent col-start-2 col-end-5 md:col-start-3 md:col-span-3 lg:col-start-4 lg:col-span-2 md:mt-10 row-start-2 md:row-start-2 row-span-4 z-30'
+					>
 						<Link href='/book' passHref>
-
 							<Image
 								{...bookImageProps}
 								sizes='(max-width: 650px) 100vw, 650px'
@@ -61,23 +65,29 @@ export default function HomePage({ siteSettings, events }) {
 								alt='book image'
 							/>
 						</Link>
-
 					</motion.div>
-					<div className="sm:hidden m-auto sm:w-1/2 lg:w-1/3 ">
-
+					<div className='sm:hidden m-auto sm:w-1/2 lg:w-1/3 '>
 						<CustomLink
 							destination={`https://www.amazon.com/Life-Dance-Sentheia-Loren-McLeod/dp/1949826392`}
 							noPadding
 							borderBottom={false}
 							active={false}
 						>
-							<motion.button whileHover={{ scale: 1.1 }} className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'>
+							<motion.button
+								whileHover={{ scale: 1.1 }}
+								className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'
+							>
 								Buy the book on Amazon
 							</motion.button>
 						</CustomLink>
 					</div>
-					<h2 className="sm:hidden text-center text-md text-primary-400">Click on my picture to learn more about me</h2>
-					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-white col-start-5 col-end-8 md:col-start-6 md:col-span-3 lg:col-start-6 lg:col-span-2 row-start-2 mt-6 md:row-start-2 md:mt-14 row-span-3 z-30 rounded-xl overflow-hidden w-100 shadow-lg '>
+					<h2 className='sm:hidden text-center text-md text-primary-400'>
+						Click on my picture to learn more about me
+					</h2>
+					<motion.div
+						whileHover={{ scale: 1.1 }}
+						className='cursor-pointer bg-white col-start-5 col-end-8 md:col-start-6 md:col-span-3 lg:col-start-6 lg:col-span-2 row-start-2 mt-6 md:row-start-2 md:mt-14 row-span-3 z-30 rounded-xl overflow-hidden w-100 shadow-lg '
+					>
 						<Link href='/about' passHref>
 							<Image
 								{...authorImageProps}
@@ -88,25 +98,32 @@ export default function HomePage({ siteSettings, events }) {
 						</Link>
 					</motion.div>
 				</section>
-				<div className="hidden sm:block m-auto sm:w-1/2 lg:w-1/3 ">
-
+				<div className='hidden sm:block m-auto sm:w-1/2 lg:w-1/3 '>
 					<CustomLink
 						destination={`https://www.amazon.com/Life-Dance-Sentheia-Loren-McLeod/dp/1949826392`}
 						noPadding
 						borderBottom={false}
 						active={false}
 					>
-						<motion.button whileHover={{ scale: 1.1 }} className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'>
+						<motion.button
+							whileHover={{ scale: 1.1 }}
+							className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'
+						>
 							Buy the book on Amazon
 						</motion.button>
 					</CustomLink>
 				</div>
 				<section className='m-auto lg:w-1/2 p-5'>
-					<h2 className='font-sans text-3xl 2xl:text-4xl my-5 '>Upcoming Events</h2>
+					<h2 className='font-sans text-3xl 2xl:text-4xl my-5 '>
+						Upcoming Events
+					</h2>
 					<div>
 						{events?.length > 0 ? (
 							events?.slice(-2).map((event: any) => (
-								<div key={event._id} className='space-y-2 my-4 p-5 bg-blue-50 rounded-xl'>
+								<div
+									key={event._id}
+									className='space-y-2 my-4 p-5 bg-blue-50 rounded-xl'
+								>
 									<h2 className='font-sans py-4 text-3xl text-primary-400 '>
 										{event?.title}
 									</h2>
@@ -145,15 +162,13 @@ HomePage.getInitialProps = async ctx => {
 		client
 			.fetch(
 				groq`
-	*[_type=="siteSettings"] 
-	`
+			*[_type=="siteSettings"]`
 			)
 			.catch(console.error),
 		client
 			.fetch(
 				groq`
-		*[_type =="event" && status == "scheduled"]
-`
+			*[_type =="event" && status == "scheduled"]`
 			)
 			.catch(console.error)
 	])
