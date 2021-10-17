@@ -30,7 +30,7 @@ export default function HomePage({ siteSettings, events }) {
 			</Head>
 
 			<main>
-				<section className='grid grid-cols-8 md:grid-cols-10 grid-rows-4 gap-1 mb-5'>
+				<section className='sm:grid sm:grid-cols-8 md:grid-cols-10 grid-rows-4 gap-1 mb-5'>
 					<div className='sm:hidden relative'>
 						<Image
 							{...heroImageMobileProps}
@@ -48,7 +48,7 @@ export default function HomePage({ siteSettings, events }) {
 						/>
 					</div>
 					<div className='hidden sm:block relative col-start-1 col-span-10 row-start-1 row-span-2 bg-black bg-opacity-70 z-20'></div>
-					<div className='text-center col-start-1 col-end-9 md:col-start-3 md:col-span-6 row-start-1 row-span-2 font-sans  text-white z-30 lg:mb-4 p-8 lg:p-5 text-2xl xl:py-6 2xl:p-10 xl:text-4xl 2xl:text-5xl '>
+					<div className='text-center col-start-1 col-end-9 md:col-start-3 md:col-span-6 row-start-1 row-span-2 font-sans text-black  sm:text-white z-30 lg:mb-4 p-8 lg:p-5 text-2xl xl:py-6 2xl:p-10 xl:text-4xl 2xl:text-5xl '>
 						<p className='leading-loose'>There is a celebration</p>
 						<p>and the celebration is my dance</p>
 					</div>
