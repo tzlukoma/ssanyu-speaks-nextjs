@@ -5,6 +5,7 @@ import event from './documents/event';
 import topic from './documents/topic';
 import blockContent from './documents/blockContent';
 import siteSettings from './documents/siteSettings';
+import gallery from './documents/gallery';
 
 // Then import schema types from any plugins that might expose them
 
@@ -20,5 +21,6 @@ export default createSchema({
 		topic,
 		blockContent,
 		siteSettings,
+		gallery,
 	]),
 });
