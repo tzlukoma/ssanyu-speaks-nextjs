@@ -63,8 +63,21 @@ export default function HomePage({ siteSettings, events }) {
 								alt='book image'
 							/>
 						</Link>
-					</motion.div>
 
+					</motion.div>
+					<div className="sm:hidden m-auto sm:w-1/2 lg:w-1/3 ">
+
+						<CustomLink
+							destination={`https://www.amazon.com/Life-Dance-Sentheia-Loren-McLeod/dp/1949826392`}
+							noPadding
+							borderBottom={false}
+							active={false}
+						>
+							<motion.button whileHover={{ scale: 1.1 }} className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'>
+								Buy the book on Amazon
+							</motion.button>
+						</CustomLink>
+					</div>
 					<h2 className="sm:hidden text-center text-md text-primary-400">Click on my picture to learn more about me</h2>
 					<motion.div whileHover={{ scale: 1.1 }} className='cursor-pointer bg-white col-start-5 col-end-8 md:col-start-6 md:col-span-3 lg:col-start-6 lg:col-span-2 row-start-2 mt-6 md:row-start-2 md:mt-14 row-span-3 z-30 rounded-xl overflow-hidden w-100 shadow-lg '>
 						<Link href='/about' passHref>
@@ -77,6 +90,19 @@ export default function HomePage({ siteSettings, events }) {
 						</Link>
 					</motion.div>
 				</section>
+				<div className="hidden sm:block m-auto sm:w-1/2 lg:w-1/3 ">
+
+					<CustomLink
+						destination={`https://www.amazon.com/Life-Dance-Sentheia-Loren-McLeod/dp/1949826392`}
+						noPadding
+						borderBottom={false}
+						active={false}
+					>
+						<motion.button whileHover={{ scale: 1.1 }} className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'>
+							Buy the book on Amazon
+						</motion.button>
+					</CustomLink>
+				</div>
 				<section className='m-auto lg:w-1/2 p-5'>
 					<h2 className='font-sans text-3xl 2xl:text-4xl my-5 '>Upcoming Events</h2>
 					<div>
