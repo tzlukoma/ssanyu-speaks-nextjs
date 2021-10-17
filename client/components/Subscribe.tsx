@@ -28,7 +28,7 @@ function MyCustomForm({ status, message, onValidated }) {
 			<div className="space-y-3 xl:space-y-5 xl:text-xl 2xl:text-2xl">
 				<label className="block mb-1 font-bold text-gray-500 ">Email Address</label>
 				<input
-					className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500"
+					className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-secondary-600"
 					onChange={(event) => setEmail(event?.target?.value ?? '')}
 					type="email"
 					placeholder="you@awesome.com"
