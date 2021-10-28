@@ -49,14 +49,6 @@ export default {
 			},
 		},
 		{
-			title: 'Author Image - Mobile',
-			name: 'authorImageMobile',
-			type: 'image',
-			options: {
-				hotspot: true,
-			},
-		},
-		{
 			title: 'Author Bio',
 			name: 'authorBio',
 			type: 'blockContent',

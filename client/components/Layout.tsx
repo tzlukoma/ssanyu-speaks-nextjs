@@ -6,7 +6,7 @@ function Layout({ children }) {
     return (
         <div>
             <Nav />
-            <div className='layout'>
+            <div className='pt-32 md:pt-40 px-4'>
                 {children}
             </div>
 

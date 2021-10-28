@@ -1,11 +1,11 @@
 {
   "root": true,
-  "api": {
-    "projectId": "boechal1",
-    "dataset": "production"
-  },
   "project": {
-    "name": "ssanyuspeaks"
+    "name": "sent2dance"
+  },
+  "api": {
+    "projectId": "0jq0mb8i",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
@@ -17,9 +17,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
