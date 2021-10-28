@@ -13,10 +13,6 @@ export default function Nav() {
             link: '/'
         },
         {
-            name: 'About Me',
-            link: '/about'
-        },
-        {
             name: 'My Book',
             link: '/suubis-sunny-smile'
         }
@@ -37,8 +33,13 @@ export default function Nav() {
     }
 
     return (
-        <nav>
+        <nav style={{
+            width: '90%',
+            maxWidth: 700,
+            margin: '0.5rem auto'
+        }}>
             <CustomLink
+                className=""
                 destination={'/'}
                 active={false}
                 noPadding={true}

@@ -37,15 +37,13 @@ export default function HomePage({ siteSettings, events }) {
 						borderBottom={false}
 					>
 
-						<div className="next-image-container promo-banner-image-container">
+						<div className="next-image-container">
 
 							<Image
 								{...bookImageProps}
 								className="next-image promo-banner-image"
-								width={700}
-								height={200}
 								layout="fill"
-								alt='brand logo'
+								alt={`Suubi's sunny smile book`}
 							/>
 						</div>
 						<h2>Pre-Order My New Book</h2>
@@ -102,16 +100,21 @@ export default function HomePage({ siteSettings, events }) {
 									<Image
 										{...heroImageProps}
 										className="next-image "
-										width={700}
-										height={900}
 										layout="fill"
-										alt='brand logo'
+										alt='ssanyu hero image'
 									/>
 								</div>
-								{/* <img src="/img/ssanyu-hero-image-large.png" alt=""> */}
 							</div>
 							<div className="hero-image-mobile">
-								{/* <img src="/img/ssanyu-hero-image-mobile.png" alt=""> */}
+								<div className="next-image-container hero-image-mobile-container">
+
+									<Image
+										{...heroImageMobileProps}
+										className="next-image "
+										layout="fill"
+										alt='ssanyu hero image'
+									/>
+								</div>
 							</div>
 
 						</div>

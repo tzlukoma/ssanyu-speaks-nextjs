@@ -188,25 +188,28 @@ footer {
 }
 
 .layout {
-    width: 80%;
+    width: 90%;
     max-width: 700px;
     margin: 0.5rem auto;
 }
 
-.main-content {
+/* .main-content {
+    width: 100%;
+} */
+
+.next-image-container {
     width: 100%;
 }
 
-.next-image-container {
-    width: 50vw;
-    height: 50vh;
-    position: relative;
+.next-image-container>div {
+    position: unset !important;
 }
 
 .next-image-container .next-image {
-    width: 100%;
-    height: 100%;
+    object-fit: contain;
+    width: 100% !important;
     position: relative !important;
+    height: unset !important;
 }
 
 .dark {
@@ -216,7 +219,6 @@ footer {
 
 .logo {
     max-width: 80%;
-    height: 20vh;
     margin: auto
 }
 
@@ -262,20 +264,20 @@ footer {
     -webkit-animation: exit 3s ease-in-out;
 }
 
-.promo-banner-image-container {
+/* .promo-banner-image-container {
     width: 100%;
     height: 30vh;
-}
+} */
 
 .promo-banner-image {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-.promo-banner>img {
+/* .promo-banner>img {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-}
+} */
 
 .promo-banner>h2 {
     margin: 0.5em;
@@ -332,6 +334,12 @@ footer {
     width: 30rem;
     height: 50rem;
 }
+
+/* .hero-image-mobile-container {
+    max-width: 40rem;
+    min-width: 15rem;
+    height: 8rem;
+} */
 
 .hero-image-large, .bio-image-large {
     display: none;
