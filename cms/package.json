@@ -1,18 +1,16 @@
 {
-  "name": "sent2dance",
+  "name": "ssanyuspeaks",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Thomas Z Lukoma <dev.tzlukoma@gmail.com>",
+  "author": "Thomas Z Lukoma <tzlukoma@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
     "build": "sanity build"
   },
-  "keywords": [
-    "sanity"
-  ],
+  "keywords": ["sanity"],
   "dependencies": {
     "@sanity/base": "^2.7.4",
     "@sanity/client": "^2.21.0",
