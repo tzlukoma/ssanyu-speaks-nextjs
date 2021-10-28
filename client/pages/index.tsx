@@ -22,21 +22,110 @@ export default function HomePage({ siteSettings, events }) {
 	return (
 		<div className='content-center font-body'>
 			<Head>
-				<title>Sent2Dance - Sentheia McLeod</title>
-				<meta name='description' content="Sentheia McLeod's Website" />
+				<title>{`Ssanyu Speaks`}</title>
+				<meta name='description' content="Ssanyu Lukoma's Website" />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<main>
+			<main className="layout">
+				<article className="main-content">
+					<CustomLink
+						className="promo-banner"
+						destination={'/suubis-sunny-smile'}
+						active={false}
+						noPadding={true}
+						borderBottom={false}
+					>
+
+						<div className="next-image-container promo-banner-image-container">
+
+							<Image
+								{...bookImageProps}
+								className="next-image promo-banner-image"
+								width={700}
+								height={200}
+								layout="fill"
+								alt='brand logo'
+							/>
+						</div>
+						<h2>Pre-Order My New Book</h2>
+					</CustomLink>
+					<h1>{`Hi, I'm Ssanyu (which means "Joy")`}</h1>
+					<section className="hero">
+						<div className="card-container">
+							{/* <!-- <h2>cards</h2> --> */}
+							<div className="info-card inspire">
+								<div className="info-card-heading">
+									<h2>I inspire</h2>
+								</div>
+								<div className="info-card-content">
+									<p>
+										I am passionate about inspiring teenagers to strive for excellence in their God-given talents
+										through one of my workshops or keynote speeches.
+									</p>
+									<i className="fa fa-info-circle"></i>
+								</div>
+
+							</div>
+							<div className="info-card bkr">
+								<div className="info-card-heading">
+									<h2>I lead</h2>
+								</div>
+								<div className="info-card-content">
+									<p>
+										At 13 years old, I founded Brown Kids Read Inc., a non-profit to motivate all children, but
+										especially children of color, to read more diverse literature.
+									</p>
+									<i className="fa fa-info-circle"></i>
+								</div>
+
+							</div>
+							<div className="info-card speaker">
+								<div className="info-card-heading">
+									<h2>I speak</h2>
+								</div>
+								<div className="info-card-content">
+									<p>
+										I am a competitive public speaker and a broadcaster for KiDz HuB Media Network, where I also
+										serve
+										on the Junior Advisory Board.
+									</p>
+									<i className="fa fa-info-circle"></i>
+								</div>
+
+							</div>
+						</div>
+						<div className="image-container">
+							<div className="hero-image-large">
+								<div className="next-image-container hero-image-container">
+
+									<Image
+										{...heroImageProps}
+										className="next-image "
+										width={700}
+										height={900}
+										layout="fill"
+										alt='brand logo'
+									/>
+								</div>
+								{/* <img src="/img/ssanyu-hero-image-large.png" alt=""> */}
+							</div>
+							<div className="hero-image-mobile">
+								{/* <img src="/img/ssanyu-hero-image-mobile.png" alt=""> */}
+							</div>
+
+						</div>
+					</section>
+				</article>
 				<section className='sm:grid sm:grid-cols-8 md:grid-cols-10 grid-rows-4 gap-1 mb-5 p-2'>
-					<div className='sm:hidden relative'>
+					{/* <div className='sm:hidden relative'>
 						<Image
 							{...heroImageMobileProps}
 							sizes='(max-width: 800px) 100vw, 800px'
 							layout='responsive'
 							alt='brand logo'
 						/>
-					</div>
+					</div> */}
 					<div className='hidden sm:block relative col-start-1 col-span-10 row-start-1 row-span-4'>
 						<Image
 							{...heroImageProps}
