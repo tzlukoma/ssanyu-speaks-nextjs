@@ -34,6 +34,7 @@ function MyCustomForm({ status, message, onValidated }) {
 					placeholder="Your email address"
 					required
 				/>
+				<button style={{ padding: "0.75em 1em" }} onClick={submit}>{`Subscribe`}</button>
 				{status === "sending" && <div className="text-primary-400">sending...</div>}
 				{status === "error" && (
 					<div
@@ -47,7 +48,7 @@ function MyCustomForm({ status, message, onValidated }) {
 						dangerouslySetInnerHTML={{ __html: message }}
 					/>
 				)}
-				<button style={{ padding: "0.75em 1em" }} onClick={submit}>{`Subscribe`}</button>
+
 			</div>
 		</div>
 	);
