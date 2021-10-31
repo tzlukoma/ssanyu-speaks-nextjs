@@ -19,9 +19,7 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans&display=swap" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
-                    <meta charset="utf-8" />
                     <meta name="description" content="Home page for Ssanyu Speaks by Ssanyu Lukoma" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
                     <meta property="og:title" content="" />
                     <meta property="og:type" content="" />

@@ -3,7 +3,7 @@ import { Subscribe } from './Subscribe'
 
 export default function Footer() {
     return (
-        <footer className="w-full lg:w-2/3 xl:w-1/2 m-auto px-5 my-10">
+        <footer>
             <Subscribe />
             <h5 className=" text-center text-xl">© Sentheia Loren McLeod 2021</h5>
         </footer>
