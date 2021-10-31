@@ -11,35 +11,50 @@ import CustomLink from '../components/CustomLink'
 function BookPage({ siteSettings }) {
     const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
     return (
-        <div className="sm:w-full lg:w-1/2 m-auto grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-1 px-10 md:p-5 font-sans">
-            <div className="">
-                <Image
-                    {...bookImageProps}
-                    sizes='(max-width: 300px) 100vw, 300px'
-                    layout='responsive'
-                    alt='book image'
-                />
-                <div className="m-auto md:w-4/5 ">
-                    {/* <CustomLink
-                        destination={`https://www.amazon.com/Life-Dance-Sentheia-Loren-McLeod/dp/1949826392`}
-                        noPadding
-                        borderBottom={false}
-                        active={false}
-                    >
-                        <motion.button whileHover={{ scale: 1.1 }} className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'>
-                            Buy the book on Amazon
-                        </motion.button>
-                    </CustomLink> */}
+        <div >
+            <h1>Suubi's Sunny Smile</h1>
+            <h2 className="book-subtitle">by Ssanyu Lukoma</h2>
+            <h2 className="book-subtitle">illustrated by Sutekina Ame</h2>
+            <section className="hero book-hero">
+                <div className="image-container">
+                    <div className="book-image-large">
+                        <div className="next-image-container">
+                            <Image
+                                {...bookImageProps}
+                                className="next-image "
+                                layout="fill"
+                                alt='ssanyu hero image'
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="space-y-3 text-xl">
-                <h1 className="text-3xl mt-4">About the Book</h1>
-                <BlockContent
-                    className="prose prose-lg 2xl:prose-xl"
-                    blocks={siteSettings[0].bookDescription}
-                    serializers={serializers}
-                />
-            </div>
+                <div className="book-content">
+                    <BlockContent
+                        className="prose prose-lg 2xl:prose-xl"
+                        blocks={siteSettings[0].bookDescription}
+                    />
+                </div>
+            </section>
+            <section className="shipping-notice">
+                <h2>Pre-Order Your Copies Today!</h2>
+                <h3>Books will begin shipping on November 18th</h3>
+                <ul>
+                    <li>If you would like to order more than 10 books, please inquire about our wholesale pricing at
+                        ssanyuspeaks | @ | gmail.com.</li>
+                </ul>
+                <p></p>
+                {/* <div className="embedded-store">
+                    <div id="my-store-66207749"></div>
+                    <div>
+                        <script data-cfasync="false" type="text/javascript"
+                            src="https://app.ecwid.com/script.js?66207749&data_platform=code&data_date=2021-09-30"
+                            charset="utf-8"></script>
+                        <script
+                            type="text/javascript"> xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-66207749");</script>
+                    </div>
+                </div> */}
+
+            </section>
         </div>
     )
 }
