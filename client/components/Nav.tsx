@@ -43,7 +43,7 @@ export default function Nav() {
             margin: '0.5rem auto'
         }}>
             <CustomLink
-                className=""
+                className=".main"
                 destination={'/'}
                 active={false}
                 noPadding={true}
@@ -70,7 +70,7 @@ export default function Nav() {
                             onClick={() => manageMenu()}
                         >
                             <CustomLink
-                                className=""
+                                className=".main"
                                 destination={link.link}
                                 active={router.pathname == link.link}
                                 noPadding={false}
