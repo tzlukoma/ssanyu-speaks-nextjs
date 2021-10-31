@@ -130,11 +130,13 @@ export default function HomePage({ siteSettings, events }) {
 							<div className="pre-book">
 								<PopupButton url='https://calendly.com/brownkidsread/pre-booked' text="Pre-Book an Event" />
 							</div>
+							<section className="subscribe">
+								<Subscribe />
+							</section>
 						</div>
+
 					</section>
-					<section className="subscribe" style={{ marginTop: "12em", }}>
-						<Subscribe />
-					</section>
+
 				</article>
 			</main>
 		</div>

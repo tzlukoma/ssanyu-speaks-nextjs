@@ -25,7 +25,7 @@ function MyCustomForm({ status, message, onValidated }) {
 	return (
 		<div className="bg-white p-8 md:p-10 lg:p-16 rounded shadow-lg w-full mb-10 border-2 border-gray-200 " style={{ width: "100%" }}>
 			<h2 style={{ textAlign: "left", marginBottom: "0.5em" }}>{`Subscribe to my mailing list`}</h2>
-			<div className="space-y-3 xl:space-y-5 xl:text-xl 2xl:text-2xl">
+			<div className="space-y-3 xl:space-y-5 xl:text-xl 2xl:text-2xl" >
 				<label className="block mb-1 font-bold text-gray-500 ">Email Address</label>
 				<input
 					className="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-secondary-600"
