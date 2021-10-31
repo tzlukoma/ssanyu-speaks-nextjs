@@ -5,15 +5,18 @@ import classNames from 'classnames';
 
 function CustomLink({ children, destination, active, noPadding, borderBottom, className }) {
     const linkStyle = classNames({
-        'block px-0 border-transparent lg:p-4 hover:text-secondary-300 hover:border-primary-300 transition-all duration-500': true,
+        className: true,
         'border-b-2': borderBottom,
-        'text-secondary-100 bg-primary-500': active,
+        'visited': active,
     });
     return (
         <Link href={destination} passHref >
-            <a className={className} style={{ padding: noPadding ? 0 : null }}
-            >{children}
-            </a>
+            <div className={linkStyle}>
+                <a className={className} style={{ padding: noPadding ? 0 : null }}
+                >{children}
+                </a>
+            </div>
+
         </Link>
     )
 }

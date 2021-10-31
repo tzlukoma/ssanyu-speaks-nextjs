@@ -102,6 +102,10 @@ a {
     color: var(--green)
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 nav>ul {
     list-style: none;
     font-family: var(--headingFont);
@@ -241,9 +245,19 @@ footer {
 }
 
 .visited {
+    display: flex;
+    align-items: center;
+    justify-items: center;
     background-color: var(--yellow);
-    color: var(--brown);
     border-radius: 5px;
+    min-height: 3em;
+    padding: 0.5em 1em;
+}
+
+.visited>a {
+    color: var(--brown);
+    text-align: center;
+    text-decoration: none;
 }
 
 .promo-banner {
@@ -260,8 +274,8 @@ footer {
     background-color: var(--black);
     border-radius: 10px;
     box-shadow: var(--level-3);
-    animation: exit 3s ease-in-out;
-    -webkit-animation: exit 3s ease-in-out;
+    /* animation: exit 3s ease-in-out;
+    -webkit-animation: exit 3s ease-in-out; */
 }
 
 /* .promo-banner-image-container {
@@ -284,9 +298,13 @@ footer {
 }
 
 .promo-banner:hover {
+    cursor: pointer;
+}
+
+/* .promo-banner:hover {
     animation: enter 3s ease-in-out;
     -webkit-animation: enter 3s ease-in-out;
-}
+} */
 
 @keyframes enter {
     0% {

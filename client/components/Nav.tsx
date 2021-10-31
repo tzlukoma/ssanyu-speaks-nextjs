@@ -9,8 +9,8 @@ export default function Nav() {
 
     const links = [
         {
-            name: 'Home',
-            link: '/'
+            name: 'About Me',
+            link: '/about'
         },
         {
             name: 'My Book',
