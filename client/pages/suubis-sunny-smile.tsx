@@ -12,7 +12,7 @@ function BookPage({ siteSettings }) {
     const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
     return (
         <div >
-            <h1>Suubi's Sunny Smile</h1>
+            <h1>{`Suubi's Sunny Smile`}</h1>
             <h2 className="book-subtitle">by Ssanyu Lukoma</h2>
             <h2 className="book-subtitle">illustrated by Sutekina Ame</h2>
             <section className="hero book-hero">
