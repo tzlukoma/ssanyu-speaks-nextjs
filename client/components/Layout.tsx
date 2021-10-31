@@ -4,7 +4,7 @@ import Nav from './Nav'
 
 function Layout({ children }) {
     return (
-        <div>
+        <div className='layout-wrapper'>
             <Nav />
             <div className='layout'>
                 {children}
