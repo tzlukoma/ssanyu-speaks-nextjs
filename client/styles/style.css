@@ -394,6 +394,10 @@ footer {
     margin-bottom: 1em;
 }
 
+.bio-image-container {
+    width: 15rem;
+}
+
 .bio-content, .book-content {
     width: 100%;
 }
