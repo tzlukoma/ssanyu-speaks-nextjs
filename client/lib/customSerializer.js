@@ -1,4 +1,4 @@
-const serializers = {
+export const serializers = {
 	types: {
 		block: (props) => {
 			const { style = 'normal' } = props.node;
