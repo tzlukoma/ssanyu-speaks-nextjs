@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { PopupButton } from "react-calendly";
 import { client } from '../lib/sanity'
 import { useNextSanityImage } from 'next-sanity-image'
-import { displayLocalTimeZone } from '../lib/timeFormats'
 import groq from 'groq'
 import CustomLink from '../components/CustomLink'
 import { Subscribe } from '../components/Subscribe';
@@ -17,10 +14,7 @@ export default function HomePage({ siteSettings, events }) {
 		siteSettings[0].heroImageMobile
 	)
 	const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
-	const authorImageProps = useNextSanityImage(
-		client,
-		siteSettings[0].authorImage
-	)
+
 	return (
 		<div className='content-center font-body'>
 			<Head>

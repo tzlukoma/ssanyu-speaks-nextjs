@@ -6,11 +6,14 @@ function Layout({ children }) {
     return (
         <div className='layout-wrapper'>
             <Nav />
-            <div className='layout'>
-                {children}
+            <div style={{ paddingBottom: "12em" }}>
+                <div className='layout'>
+                    {children}
+                </div>
             </div>
-            {/* 
-            <Footer /> */}
+
+
+            <Footer />
         </div>
     )
 }
