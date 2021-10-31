@@ -8,6 +8,7 @@ import { useNextSanityImage } from 'next-sanity-image'
 import { displayLocalTimeZone } from '../lib/timeFormats'
 import groq from 'groq'
 import CustomLink from '../components/CustomLink'
+import { Subscribe } from '../components/Subscribe';
 
 export default function HomePage({ siteSettings, events }) {
 	const heroImageProps = useNextSanityImage(client, siteSettings[0].heroImage)
@@ -120,18 +121,21 @@ export default function HomePage({ siteSettings, events }) {
 
 						</div>
 					</section>
-				</article>
-				<section>
-					<div className="cta">
-						<div className="shedule">
-							<PopupButton url="https://calendly.com/llukoma/ssanyu-speaks-consultation" text="Schedule a Consultation" />
-						</div>
-						<div className="pre-book">
-							<PopupButton url='https://calendly.com/brownkidsread/pre-booked' text="Pre-Book an Event" />
-						</div>
-					</div>
 
-				</section>
+					<section>
+						<div className="cta">
+							<div className="shedule">
+								<PopupButton url="https://calendly.com/llukoma/ssanyu-speaks-consultation" text="Schedule a Consultation" />
+							</div>
+							<div className="pre-book">
+								<PopupButton url='https://calendly.com/brownkidsread/pre-booked' text="Pre-Book an Event" />
+							</div>
+						</div>
+					</section>
+					<section className="subscribe" style={{ marginTop: "12em", }}>
+						<Subscribe />
+					</section>
+				</article>
 			</main>
 		</div>
 	)

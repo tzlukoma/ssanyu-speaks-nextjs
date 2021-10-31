@@ -9,8 +9,8 @@ function Layout({ children }) {
             <div className='layout'>
                 {children}
             </div>
-
-            <Footer />
+            {/* 
+            <Footer /> */}
         </div>
     )
 }
