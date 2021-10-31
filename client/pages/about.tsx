@@ -18,47 +18,42 @@ function AboutPage({ siteSettings }) {
 
     return (
         <div>
-            <main >
-                <article className="main-content">
-
+            <main>
+                <article className='main-content'>
                     <h1>Who is Ssanyu?</h1>
-                    <section className="hero bio-hero">
-                        <div className="bio-container">
-                            <div className="image-container">
-                                <div className="bio-image-large">
-                                    <div className="next-image-container bio-image-container">
-
+                    <section className='hero bio-hero'>
+                        <div className='bio-container'>
+                            <div className='image-container'>
+                                <div className='bio-image-large'>
+                                    <div className='next-image-container bio-image-container'>
                                         <Image
                                             {...authorImageProps}
-                                            className="next-image "
-                                            layout="fill"
+                                            className='next-image '
+                                            layout='fill'
                                             alt='ssanyu hero image'
                                         />
                                     </div>
                                 </div>
-                                <div className="bio-image-mobile">
-                                    <div className="next-image-container">
+                                <div className='bio-image-mobile'>
+                                    <div className='next-image-container'>
                                         <Image
                                             {...authorImageMobileProps}
-                                            className="next-image "
-                                            layout="fill"
+                                            className='next-image '
+                                            layout='fill'
                                             alt='ssanyu hero image'
                                         />
-                                    </div>                                </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="bio-content">
+                        <div className='bio-content'>
                             <BlockContent
-                                className="prose prose-lg 2xl:prose-xl"
+                                className='prose prose-lg 2xl:prose-xl'
                                 blocks={siteSettings[0].authorBio}
                             />
                         </div>
-
                     </section>
-
                 </article>
-
-
             </main>
         </div>
     )
