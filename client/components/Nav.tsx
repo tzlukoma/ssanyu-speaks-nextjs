@@ -9,12 +9,20 @@ export default function Nav() {
 
     const links = [
         {
-            name: 'About Me',
+            name: 'Home',
+            link: '/'
+        },
+        {
+            name: 'About',
             link: '/about'
         },
         {
-            name: 'My Book',
+            name: 'Book',
             link: '/suubis-sunny-smile'
+        },
+        {
+            name: 'Events',
+            link: '/events'
         }
     ]
 
@@ -26,10 +34,6 @@ export default function Nav() {
         if (menuOpen) {
             setMenuOpen(false)
         } else return
-    }
-
-    const customLoader = src => {
-        return src
     }
 
     return (
@@ -66,6 +70,7 @@ export default function Nav() {
                             onClick={() => manageMenu()}
                         >
                             <CustomLink
+                                className=""
                                 destination={link.link}
                                 active={router.pathname == link.link}
                                 noPadding={false}
