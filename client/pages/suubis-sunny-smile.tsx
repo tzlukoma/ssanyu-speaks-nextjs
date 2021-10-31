@@ -20,7 +20,7 @@ function BookPage({ siteSettings }) {
                     alt='book image'
                 />
                 <div className="m-auto md:w-4/5 ">
-                    <CustomLink
+                    {/* <CustomLink
                         destination={`https://www.amazon.com/Life-Dance-Sentheia-Loren-McLeod/dp/1949826392`}
                         noPadding
                         borderBottom={false}
@@ -29,7 +29,7 @@ function BookPage({ siteSettings }) {
                         <motion.button whileHover={{ scale: 1.1 }} className='w-full my-5 cursor-pointer bg-primary-400 hover:bg-primary-600 text-white text-xl font-bold py-5 px-2 mt-4 rounded-lg uppercase'>
                             Buy the book on Amazon
                         </motion.button>
-                    </CustomLink>
+                    </CustomLink> */}
                 </div>
             </div>
             <div className="space-y-3 text-xl">
