@@ -1,6 +1,6 @@
 export const serializers = {
 	types: {
-		block: (props) => {
+		blockContent: (props) => {
 			const { style = 'normal' } = props.node;
 
 			if (/^h\d/.test(style)) {
