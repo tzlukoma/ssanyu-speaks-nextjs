@@ -51,7 +51,6 @@ function AboutPage({ siteSettings }) {
                             <BlockContent
                                 className="prose prose-lg 2xl:prose-xl"
                                 blocks={siteSettings[0].authorBio}
-                                serializers={serializers}
                             />
                         </div>
 
