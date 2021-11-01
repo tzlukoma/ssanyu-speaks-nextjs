@@ -5,6 +5,7 @@ import { client } from '../lib/sanity'
 import { useNextSanityImage } from 'next-sanity-image'
 import groq from 'groq'
 import CustomLink from '../components/CustomLink'
+import EventCardMini from '../components/EventCardMini'
 import { Subscribe } from '../components/Subscribe';
 
 export default function HomePage({ siteSettings, events }) {
@@ -14,6 +15,12 @@ export default function HomePage({ siteSettings, events }) {
 		siteSettings[0].heroImageMobile
 	)
 	const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
+
+	const sortedEvents = events.sort(function (a: any, b: any) {
+		const firstItem: any = new Date(a.date)
+		const secondItem: any = new Date(b.date)
+		return firstItem - secondItem;
+	});
 
 	return (
 		<div className='content-center font-body'>
@@ -44,7 +51,9 @@ export default function HomePage({ siteSettings, events }) {
 						</div>
 						<h2>Pre-Order My New Book</h2>
 					</CustomLink>
-					<h1>{`Hi, I'm Ssanyu (which means "Joy")`}</h1>
+					<h1>{`Upcoming Event`}</h1>
+					<EventCardMini event={sortedEvents[0]} />
+					<h2 className="greeting">{`Hi, I'm Ssanyu (which means "Joy")`}</h2>
 					<section className="hero">
 						<div className="card-container">
 							{/* <!-- <h2>cards</h2> --> */}
