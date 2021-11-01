@@ -40,7 +40,7 @@ function AboutPage({ siteSettings }) {
                                             {...authorImageMobileProps}
                                             className='next-image '
                                             layout='fill'
-                                            alt='ssanyu hero image'
+                                            alt='ssanyu author image'
                                         />
                                     </div>
                                 </div>
