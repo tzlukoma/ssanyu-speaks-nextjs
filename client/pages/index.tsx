@@ -33,7 +33,7 @@ export default function HomePage({ siteSettings, events }) {
 						borderBottom={false}
 					>
 
-						<div className="next-image-container">
+						<div className="next-image-container" style={{ marginRight: 20 }}>
 
 							<Image
 								{...bookImageProps}
