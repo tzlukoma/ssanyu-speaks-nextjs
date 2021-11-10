@@ -38,7 +38,7 @@ const EventCard = ({ event, emptyCard = false }) => {
                             borderBottom={false}
                             active={false}
                         >
-                            <button style={{ marginLeft: 0 }}>Register for Event</button>
+                            <button style={{ marginLeft: 0, cursor: 'pointer' }}>Register for Event</button>
                         </CustomLink>
                     )}
                 </div>
