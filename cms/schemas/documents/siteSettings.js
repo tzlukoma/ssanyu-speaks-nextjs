@@ -61,5 +61,15 @@ export default {
 			name: 'authorBio',
 			type: 'blockContent',
 		},
+		{
+			name: 'placesToBuy',
+			type: 'array', // supports drag'n'drop of multiple files
+			of: [
+				{
+					type: 'reference',
+					to: [{ type: 'purchaseLocation' }],
+				},
+			],
+		},
 	],
 };

@@ -10,6 +10,7 @@ interface PurchaseLocationProps {
         thumbnail: any;
         purchaseLocation: string;
         purchaseUrl: string;
+        status: string;
     }[]
 }
 
@@ -22,13 +23,26 @@ function WhereToBuyPage({ purchaseLocations }: PurchaseLocationProps) {
                 <div>
                     {purchaseLocations?.length > 0 ? (
                         purchaseLocations?.map((item, index) => (
-                            <a key={item._id} href={item.purchaseUrl}>
-                                <div className="event-wrapper" style={{ background: 'white', color: 'var(--happyHueBrown)' }}>
-                                    <img src={urlFor(item.thumbnail).url()} alt="location" style={{ alignSelf: 'center' }} />
-                                    <h2 style={{ textAlign: 'center', padding: 0, margin: '1em 0' }}>{`Buy from ${item.title}`}</h2>
-                                </div>
-                            </a>
+                            <div key={item._id} >
+                                {
+                                    item.status === 'available' ? (
+                                        <a href={item.status === 'available' ? item.purchaseUrl : ''}>
+                                            <div className="event-wrapper" style={{ background: 'white', color: 'var(--happyHueBrown)' }}>
+                                                <img src={urlFor(item.thumbnail).url()} alt="location" style={{ alignSelf: 'center' }} />
+                                                <h2 style={{ textAlign: 'center', padding: 0, margin: '1em 0' }}>{`Buy from ${item.title}`}</h2>
+                                            </div>
+                                        </a>
+                                    ) : (
 
+                                        <div className="event-wrapper" style={{ background: 'white', color: 'var(--happyHueBrown)' }}>
+                                            <img src={urlFor(item.thumbnail).url()} alt="location" style={{ alignSelf: 'center' }} />
+                                            <h2 style={{ textAlign: 'center', padding: 0, margin: '1em 0' }}>{`Available soon from ${item.title}`}</h2>
+                                        </div>
+
+                                    )
+                                }
+
+                            </div>
 
                         ))
                     ) : (
@@ -49,7 +63,7 @@ WhereToBuyPage.getInitialProps = async ctx => {
         client
             .fetch(
                 groq`
-	*[_type =="purchaseLocation" && status == "available"]`
+	*[_type =="purchaseLocation" && status in ["available","pending"]]`
             )
             .catch(console.error),
     ])
