@@ -21,6 +21,10 @@ export default function Nav() {
             link: '/suubis-sunny-smile'
         },
         {
+            name: 'Where to Buy',
+            link: '/where-to-buy'
+        },
+        {
             name: 'Events',
             link: '/events'
         }

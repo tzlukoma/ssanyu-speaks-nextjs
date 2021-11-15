@@ -6,6 +6,7 @@ import topic from './documents/topic';
 import blockContent from './documents/blockContent';
 import siteSettings from './documents/siteSettings';
 import gallery from './documents/gallery';
+import purchaseLocation from './documents/purchaseLocation';
 
 // Then import schema types from any plugins that might expose them
 
@@ -22,5 +23,6 @@ export default createSchema({
 		blockContent,
 		siteSettings,
 		gallery,
+		purchaseLocation,
 	]),
 });
