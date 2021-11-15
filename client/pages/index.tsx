@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { PopupButton } from "react-calendly";
+import { compareAsc, parseISO, } from 'date-fns'
 import { client } from '../lib/sanity'
 import { useNextSanityImage } from 'next-sanity-image'
 import groq from 'groq'
@@ -16,7 +17,17 @@ export default function HomePage({ siteSettings, events }) {
 	)
 	const bookImageProps = useNextSanityImage(client, siteSettings[0].bookImage)
 
-	const sortedEvents = events.sort(function (a: any, b: any) {
+	const isDatePassed = (date: string) => {
+		const timeElapsed = Date.now()
+		const today = new Date(timeElapsed)
+		const comparison = compareAsc(today, parseISO(date),)
+		if (comparison > 0) return true
+		return false
+	}
+
+	const filteredDates = events.filter((event: any) => isDatePassed(event.date) === false)
+
+	const sortedEvents = filteredDates.sort(function (a: any, b: any) {
 		const firstItem: any = new Date(a.date)
 		const secondItem: any = new Date(b.date)
 		return firstItem - secondItem;
