@@ -1,4 +1,4 @@
-import { FaRegCalendarAlt as icon } from 'react-icons/fa';
+import { FaRegQuestionCircle as icon } from 'react-icons/fa';
 
 export default {
 	title: 'Bulk Order Request',
