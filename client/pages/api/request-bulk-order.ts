@@ -1,5 +1,6 @@
 
 /* eslint-disable import/no-anonymous-default-export */
+import axios from 'axios'
 import { authClient } from './../../lib/sanity';
 
 export default async (req, res) => {
@@ -29,7 +30,10 @@ export default async (req, res) => {
             phone
         };
 
-        const result = await authClient.create(doc)
+        const emailResult = await authClient.create(doc)
+        const result = await axios.post(`http:localhost:3000/api/send-email`,
+            { ...emailResult }
+        )
         return res.status(201).json(result)
 
     } catch (error) {
