@@ -47,7 +47,7 @@ function WhereToBuyPage({ purchaseLocations }: PurchaseLocationProps) {
                         ))
                     ) : (
                         <div className='event-wrapper'>
-                            <div className="event-none">No upcoming events</div>
+                            <div className="event-none">Not available yet</div>
                         </div>
                     )}
                 </div>

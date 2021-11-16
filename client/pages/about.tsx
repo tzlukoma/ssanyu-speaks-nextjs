@@ -9,11 +9,11 @@ import { client } from '../lib/sanity'
 function AboutPage({ siteSettings }) {
     const authorImageProps = useNextSanityImage(
         client,
-        siteSettings[0].authorImage
+        siteSettings[0]?.authorImage
     )
     const authorImageMobileProps = useNextSanityImage(
         client,
-        siteSettings[0].authorImageMobile
+        siteSettings[0]?.authorImageMobile
     )
 
     return (
@@ -49,7 +49,7 @@ function AboutPage({ siteSettings }) {
                         <div className='bio-content'>
                             <BlockContent
                                 className='prose prose-lg 2xl:prose-xl'
-                                blocks={siteSettings[0].authorBio}
+                                blocks={siteSettings[0]?.authorBio}
                             />
                         </div>
                     </section>
