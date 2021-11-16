@@ -7,6 +7,7 @@ import blockContent from './documents/blockContent';
 import siteSettings from './documents/siteSettings';
 import gallery from './documents/gallery';
 import purchaseLocation from './documents/purchaseLocation';
+import bulkOrder from './documents/bulkOrder';
 
 // Then import schema types from any plugins that might expose them
 
@@ -24,5 +25,6 @@ export default createSchema({
 		siteSettings,
 		gallery,
 		purchaseLocation,
+		bulkOrder,
 	]),
 });

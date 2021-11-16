@@ -125,7 +125,7 @@ label {
 }
 
 form {
-    padding: 1em;
+    /* padding: 1em; */
 }
 
 input, textarea {
@@ -139,13 +139,19 @@ input[type="text"] {
     font-size: var(--input-font);
 }
 
+input[type="textarea"] {
+    --input-font: 1.1rem;
+    font-size: var(--input-font);
+    min-height: '3rem'
+}
+
 input:focus, textarea:focus {
     outline: 2px solid var(--green)
 }
 
 ::placeholder {
     color: var(--lightBrown);
-    text-align: center
+    text-align: left
 }
 
 button, .button {
