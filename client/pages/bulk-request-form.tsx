@@ -17,6 +17,15 @@ function BulkRequestFormPage() {
             },
             method: "POST"
         })
+
+        const emailResponse = await fetch(`api/send-email`, {
+            body: JSON.stringify(formBody),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            method: "POST"
+        })
+        console.log(emailResponse)
         return response
     }
 
