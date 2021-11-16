@@ -10,7 +10,7 @@ export default async (req, res) => {
         return res.status(400).json({ error: 'Email is required' });
     }
 
-    const { organization, firstName, lastName, email, address, phone } = req.body
+    const { organization, firstName, lastName, email, address, shippingAddress, numberOfBooks, phone } = req.body
     const timeElapsed = Date.now()
     const today = new Date(timeElapsed)
 
@@ -26,6 +26,8 @@ export default async (req, res) => {
             lastName,
             email,
             address,
+            shippingAddress,
+            numberOfBooks: parseInt(numberOfBooks),
             phone
         };
 

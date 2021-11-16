@@ -59,6 +59,18 @@ export default {
 			readOnly: true,
 		},
 		{
+			title: 'Shipping Address',
+			name: 'shippingAddress',
+			type: 'text',
+			readOnly: true,
+		},
+		{
+			title: 'Number of Books',
+			name: 'numberOfBooks',
+			type: 'number',
+			readOnly: true,
+		},
+		{
 			title: 'Status',
 			name: 'status',
 			type: 'string',
