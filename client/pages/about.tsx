@@ -3,7 +3,6 @@ import Image from 'next/image'
 import groq from 'groq'
 import { useNextSanityImage } from 'next-sanity-image'
 import BlockContent from '@sanity/block-content-to-react'
-import { serializers } from '../lib/customSerializer'
 import { client } from '../lib/sanity'
 
 function AboutPage({ siteSettings }) {
