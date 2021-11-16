@@ -213,7 +213,7 @@ footer {
     width: 100%;
 }
 
-.next-image-container>div {
+.next-image-container>span {
     position: unset !important;
 }
 
