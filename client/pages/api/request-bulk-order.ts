@@ -1,5 +1,6 @@
 
 /* eslint-disable import/no-anonymous-default-export */
+import axios from 'axios'
 import { authClient } from './../../lib/sanity';
 
 export default async (req, res) => {
