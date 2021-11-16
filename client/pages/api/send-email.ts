@@ -12,7 +12,7 @@ async function sendEmail(req, res) {
         return res.status(400).json({ error: 'Email is required' });
     }
 
-    const { organization, firstName, lastName, email, address, phone } = req.body
+    const { organization, firstName, lastName, email, address, shippingAddress, numberOfBooks, phone } = req.body
     const timeElapsed = Date.now()
     const today = new Date(timeElapsed)
     const options = {
@@ -26,7 +26,7 @@ async function sendEmail(req, res) {
     try {
 
         const emailBody = {
-            to: ['tzlukoma@gmail.com'],
+            to: ['tzlukoma@gmail.com, ssanyuspeaks@gmail.com, llukoma@gmail.com'],
             from: 'tzlukoma@morethanahut.com',
             subject: `'New Bulk Order from ${firstName} ${lastName} - ${organization}'`,
             html: `
@@ -558,6 +558,22 @@ async function sendEmail(req, res) {
                                                         <p class="align-left" style="margin: .4em 0 1.1875em; font-size: 16px; line-height: 1.625; color: #51545E; text-align: left;"><strong>${address}</strong></p>
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <td style="word-break: break-word; font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; font-size: 16px;">
+                                                        <p style="margin: .4em 0 1.1875em; font-size: 16px; line-height: 1.625; color: #51545E;">Shipping Address:</p>
+                                                    </td>
+                                                    <td style="word-break: break-word; font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; font-size: 16px;">
+                                                        <p class="align-left" style="margin: .4em 0 1.1875em; font-size: 16px; line-height: 1.625; color: #51545E; text-align: left;"><strong>${shippingAddress}</strong></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                <td style="word-break: break-word; font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; font-size: 16px;">
+                                                    <p style="margin: .4em 0 1.1875em; font-size: 16px; line-height: 1.625; color: #51545E;">Number of Books:</p>
+                                                </td>
+                                                <td style="word-break: break-word; font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; font-size: 16px;">
+                                                    <p class="align-left" style="margin: .4em 0 1.1875em; font-size: 16px; line-height: 1.625; color: #51545E; text-align: left;"><strong>${numberOfBooks}</strong></p>
+                                                </td>
+                                            </tr>
                                             </table>
                                             <p style="margin: .4em 0 1.1875em; font-size: 16px; line-height: 1.625; color: #51545E;">Sent Automatically,
                                                 <br>Your beloved website

@@ -112,7 +112,27 @@ function BulkRequestFormPage() {
                     aria-label="Address"
                     disabled={isLoading}
                 />
+
                 {errors?.address && <ErrorMessage message={errors.address.message} />}
+                <label htmlFor="shippingAddress">Shipping Address</label>
+                <input
+                    type="textarea"
+                    {...register('shippingAddress')}
+                    placeholder="Shipping address"
+                    aria-label="Shipping address"
+                    disabled={isLoading}
+                />
+                {errors?.shippingAddress && <ErrorMessage message={errors.shippingAddress.message} />}
+                <p>How many books would you like to order (10 or more)</p>
+                <label htmlFor="numberOfBooks">Number of Books</label>
+                <input
+                    type="number"
+                    {...register('numberOfBooks', { min: { value: 10, message: 'Please enter a number greater than 9' } })}
+                    placeholder="Number of books (10 or more)"
+                    aria-label="Number of books"
+                    disabled={isLoading}
+                />
+                {errors?.numberOfBooks && <ErrorMessage message={errors.numberOfBooks.message} />}
 
                 <button type="submit">Submit</button>
                 {isError && <ErrorMessage message={error} />}
