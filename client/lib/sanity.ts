@@ -14,7 +14,8 @@ const configAuth = {
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     apiVersion: '2021-03-25',
-    token: process.env.SANITY_FORM_ROBOT_TOKEN
+    token: process.env.SANITY_FORM_ROBOT_TOKEN,
+    useCdn: false
 }
 
 export const client = sanityClient(config)
