@@ -1,11 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
 import groq from 'groq'
-import { displayLocalTimeZone } from '../lib/timeFormats'
-import { useNextSanityImage } from 'next-sanity-image'
-import CustomLink from '../components/CustomLink'
-import BlockContent from '@sanity/block-content-to-react'
-import { serializers } from '../lib/customSerializer'
 import { client } from '../lib/sanity'
 import EventCard from '../components/EventCard'
 
@@ -16,8 +10,8 @@ function EventsPage({ upcomingEvents, pastEvents }) {
         return firstItem - secondItem;
     });
     const sortedPastEvents = pastEvents?.sort(function (a: any, b: any) {
-        const firstItem: any = new Date(a.date)
-        const secondItem: any = new Date(b.date)
+        const secondItem: any = new Date(a.date)
+        const firstItem: any = new Date(b.date)
         return firstItem - secondItem;
     });
     console.log(sortedUpcomingEvents)
