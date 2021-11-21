@@ -73,8 +73,14 @@ export default function HomePage({ siteSettings, events }) {
 							<button style={{ cursor: 'pointer' }}>Register for My Book Launch!!</button>
 						</CustomLink>
 					</div>
-					<h1>{`Upcoming Event`}</h1>
-					<EventCardMini event={sortedEvents[0]} />
+					{
+						sortedEvents?.length > 0 ? (
+							<>
+								<h1>{`Upcoming Event`}</h1>
+								<EventCardMini event={sortedEvents[0]} /></>
+						) : null
+					}
+
 					<h2 className="greeting">{`Hi, I'm Ssanyu (which means "Joy")`}</h2>
 					<section className="hero">
 						<div className="card-container">
