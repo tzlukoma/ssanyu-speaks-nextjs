@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400|Bubblegum+Sans:400');
+
 :root {
     /* Define Colors as colors */
     --red: #ff5470;
@@ -433,6 +434,11 @@ footer {
     color: var(--green);
 }
 
+.buy-button {
+    display: flex;
+    flex-direction: column;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -584,21 +590,26 @@ footer {
     .event-wrapper {
         --template-cols: 1fr 1fr;
     }
+
     .event-image-wrapper {
         display: block;
     }
+
     .event-content {
         padding: 1em;
     }
+
     .event-discription-wrapper {
         --padding: 0.5em;
         grid-column-start: 1;
         grid-column-end: 3;
     }
+
     .cta {
         display: flex;
         justify-content: center;
     }
+
     .cta button {
         padding: 1em 2em;
         margin: 0 0.5em;
@@ -620,6 +631,7 @@ footer {
     .event-wrapper {
         --template-cols: 2fr 3fr;
     }
+
     footer.home-footer, footer.bio-footer {
         position: absolute;
         margin-top: 18em;
@@ -627,48 +639,60 @@ footer {
         text-align: center;
         z-index: 50;
     }
+
     footer.bio-footer {
         margin-top: 12em;
     }
+
     footer.book-footer {
         margin-top: 2em;
         text-align: center;
     }
+
     .hero {
         --template-cols: 2fr 1fr 2fr;
         margin-bottom: -14em;
     }
+
     .hero.bio-hero {
         --template-cols: 2fr 3fr;
         margin-bottom: -14em;
     }
+
     .hero.book-hero {
         --template-cols: 1fr;
         margin-bottom: 0;
     }
+
     .hero-image-mobile, .bio-image-mobile {
         display: none;
     }
+
     .hero-image-large {
         display: inline-block;
         position: relative;
     }
+
     .bio-image-large {
         display: inline-block;
         margin-top: 1.5em;
     }
+
     .bio-content {
         width: 95%;
     }
+
     .card-container {
         --grid-row: 1
     }
+
     .cta {
         position: absolute;
         padding: 1.5em;
         background-color: rgb(15, 18, 18, 0.3);
         z-index: 30;
     }
+
     .subscribe {
         position: absolute;
         z-index: 30;
@@ -676,9 +700,11 @@ footer {
         padding-right: 3em;
         padding-bottom: 5em;
     }
+
     .subscribe h3 {
         text-align: left;
     }
+
     .subscribe input, textarea {
         margin: 0 0 1.5em;
     }
