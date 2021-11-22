@@ -46,7 +46,7 @@ function BookPage({ siteSettings }) {
                 />
 
                 <h2>Want to Buy Just the Book?</h2>
-                <h2 style={{ margin: 0, fontSize: '1.5em' }}>Books Available at <span> <CustomLink className='' destination="/where-to-buy" noPadding borderBottom={true} active={false} >these locations.</CustomLink></span></h2>
+                <h2 style={{ margin: 0, fontSize: '1.5em' }}>Buy it at <span> <CustomLink className='' destination="/where-to-buy" noPadding borderBottom={true} active={false} >these locations.</CustomLink></span></h2>
                 <h2>Want to Buy In Bulk?</h2>
                 <p>If you would like to order more than 10 books at our bulk discount, please <CustomLink className='' destination="/bulk-request-form" noPadding borderBottom={false} active={false} >submit an inquiry.</CustomLink>
                 </p>
