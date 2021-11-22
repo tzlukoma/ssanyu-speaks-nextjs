@@ -37,21 +37,19 @@ function BookPage({ siteSettings }) {
             <section className="shipping-notice">
                 <h2>Buy The Bundle Exclusive (Book + Coloring Book)</h2>
                 <h3>Only Available on This Site</h3>
-
-                <Image src={'/suubi-sunny-smile-bundle.png'} width={300} height={202} alt={`Suubi's Sunny Smile bundle - both books`} />
-                <BuyNowButton
-                    storeId={process.env.NEXT_PUBLIC_ECWID_STORE_ID}
-                    productId={400650737}
-                    isShowPrice={true}
-                />
-
+                <div className="buy-button">
+                    <Image src={'/suubi-sunny-smile-bundle.png'} width={600} height={404} alt={`Suubi's Sunny Smile bundle - both books`} />
+                    <BuyNowButton
+                        storeId={process.env.NEXT_PUBLIC_ECWID_STORE_ID}
+                        productId={400650737}
+                        isShowPrice={true}
+                    />
+                </div>
                 <h2>Want to Buy Just the Book?</h2>
                 <h2 style={{ margin: 0, fontSize: '1.5em' }}>Buy it at <span> <CustomLink className='' destination="/where-to-buy" noPadding borderBottom={true} active={false} >these locations.</CustomLink></span></h2>
                 <h2>Want to Buy In Bulk?</h2>
                 <p>If you would like to order more than 10 books at our bulk discount, please <CustomLink className='' destination="/bulk-request-form" noPadding borderBottom={false} active={false} >submit an inquiry.</CustomLink>
                 </p>
-
-
             </section>
         </div>
     )
