@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import groq from 'groq'
 import { useNextSanityImage } from 'next-sanity-image'
-import { ProductBrowser } from '@ecwid/nextjs-ecwid-plugin'
+import { ProductBrowser, BuyNowButton } from '@ecwid/nextjs-ecwid-plugin'
 import BlockContent from '@sanity/block-content-to-react'
 import { client } from '../lib/sanity'
 import CustomLink from '../components/CustomLink'
@@ -35,15 +35,22 @@ function BookPage({ siteSettings }) {
                 />
             </section>
             <section className="shipping-notice">
-                <h2>Pre-Order Your Copies Today!</h2>
-                <h3>Books will begin shipping on November 18th</h3>
-                <p>If you would like to order more than 10 books, please <CustomLink className='' destination="/bulk-request-form" noPadding borderBottom={false} active={false} >submit an inquiry.</CustomLink>
+                <h2>Buy The Bundle Exclusive (Book + Coloring Book)</h2>
+                <h3>Only Available on This Site</h3>
+
+                <Image src={'/suubi-sunny-smile-bundle.png'} width={300} height={202} alt={`Suubi's Sunny Smile bundle - both books`} />
+                <BuyNowButton
+                    storeId={process.env.NEXT_PUBLIC_ECWID_STORE_ID}
+                    productId={400650737}
+                    isShowPrice={true}
+                />
+
+                <h2>Want to Buy Just the Book?</h2>
+                <h2 style={{ margin: 0, fontSize: '1.5em' }}>Books Available at <span> <CustomLink className='' destination="/where-to-buy" noPadding borderBottom={true} active={false} >these locations.</CustomLink></span></h2>
+                <h2>Want to Buy In Bulk?</h2>
+                <p>If you would like to order more than 10 books at our bulk discount, please <CustomLink className='' destination="/bulk-request-form" noPadding borderBottom={false} active={false} >submit an inquiry.</CustomLink>
                 </p>
-                <div className="embedded-store">
-                    <ProductBrowser
-                        storeId={process.env.NEXT_PUBLIC_ECWID_STORE_ID}
-                    />
-                </div>
+
 
             </section>
         </div>
