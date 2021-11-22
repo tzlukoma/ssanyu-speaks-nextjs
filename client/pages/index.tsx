@@ -60,19 +60,8 @@ export default function HomePage({ siteSettings, events }) {
 								alt={`Suubi's sunny smile book`}
 							/>
 						</div>
-						<h2>Pre-Order My New Book</h2>
+						<h2>Order My New Book</h2>
 					</CustomLink>
-					<div style={{ textAlign: 'center', }}>
-						<CustomLink
-							className=''
-							destination={'https://www.eventbrite.com/e/suubis-sunny-smile-book-launch-tickets-196856482037'}
-							noPadding
-							borderBottom={false}
-							active={false}
-						>
-							<button style={{ cursor: 'pointer' }}>Register for My Book Launch!!</button>
-						</CustomLink>
-					</div>
 					{
 						sortedEvents?.length > 0 ? (
 							<>
