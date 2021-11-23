@@ -39,11 +39,11 @@ function BookPage({ siteSettings }) {
                 <h3>Only Available on This Site</h3>
                 <div className="buy-button">
                     <Image src={'/suubi-sunny-smile-bundle.png'} width={600} height={404} alt={`Suubi's Sunny Smile bundle - both books`} />
-                    <BuyNowButton
-                        storeId={process.env.NEXT_PUBLIC_ECWID_STORE_ID}
-                        productId={400650737}
-                        isShowPrice={true}
-                    />
+                    <CustomLink
+                        className=""
+                        destination={'https://store66207749.company.site/products/Suubis-Sunny-Smile-Coloring-Book-Bundle-p400650737'} noPadding active={false} borderBottom={false}>
+                        <button>Buy the Bundle</button>
+                    </CustomLink>
                 </div>
                 <h2>Want to Buy Just the Book?</h2>
                 <h2 style={{ margin: 0, fontSize: '1.5em' }}>Buy it at <span> <CustomLink className='' destination="/where-to-buy" noPadding borderBottom={true} active={false} >these locations.</CustomLink></span></h2>
