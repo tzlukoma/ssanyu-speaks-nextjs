@@ -621,7 +621,13 @@ footer {
     }
 
     .buy-button {
-        max-width: 50%;
+        max-width: 80%;
+        margin: auto
+    }
+
+    .buy-button button {
+        width: 100%;
+        margin-left: 0px
     }
 }
 
