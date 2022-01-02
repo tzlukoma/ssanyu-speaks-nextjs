@@ -58,7 +58,7 @@ export default function Nav() {
                     <div className='logo next-image-container'>
                         <Image
                             className="next-image"
-                            src='/ssanyu-lukoma-logo-dark-bg.svg'
+                            src='/ssanyu-speaks-logo-new.svg'
                             alt='brand logo'
                             layout="fill"
                         />
