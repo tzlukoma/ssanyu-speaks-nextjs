@@ -233,6 +233,7 @@ footer {
 
 .logo {
     max-width: 100%;
+    padding-bottom: 0.5rem;
     margin: auto
 }
 
@@ -615,6 +616,7 @@ footer {
 
     .cta {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -641,6 +643,8 @@ footer {
         --button-font: 1.25rem;
         --input-font: 1.25rem;
     }
+
+
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -648,6 +652,10 @@ footer {
 @media (min-width: 991.98px) {
     .event-wrapper {
         --template-cols: 2fr 3fr;
+    }
+
+    .cta {
+        flex-direction: unset;
     }
 
     footer.home-footer, footer.bio-footer {
