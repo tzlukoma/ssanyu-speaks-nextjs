@@ -237,6 +237,17 @@ footer {
     margin: auto
 }
 
+.social {
+    margin: 5em 0px 0.5em;
+    display: flex;
+    justify-content: center;
+    z-index: 50;
+}
+
+.social-link {
+    color: var(--textColor);
+}
+
 .call-out {
     display: flex;
     flex-wrap: wrap;
