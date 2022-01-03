@@ -233,6 +233,7 @@ footer {
 
 .logo {
     max-width: 100%;
+    padding-bottom: 0.5rem;
     margin: auto
 }
 
@@ -615,12 +616,17 @@ footer {
 
     .cta {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
     .cta button {
         padding: 1em 2em;
         margin: 0 0.5em;
+    }
+
+    .schedule {
+        margin: 1em;
     }
 
     .buy-button {
@@ -641,6 +647,9 @@ footer {
         --button-font: 1.25rem;
         --input-font: 1.25rem;
     }
+
+
+
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -648,6 +657,14 @@ footer {
 @media (min-width: 991.98px) {
     .event-wrapper {
         --template-cols: 2fr 3fr;
+    }
+
+    .cta {
+        flex-direction: unset;
+    }
+
+    .schedule {
+        margin: 0;
     }
 
     footer.home-footer, footer.bio-footer {
