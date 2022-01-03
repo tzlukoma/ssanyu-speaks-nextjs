@@ -625,6 +625,10 @@ footer {
         margin: 0 0.5em;
     }
 
+    .schedule {
+        margin: 1em;
+    }
+
     .buy-button {
         max-width: 80%;
         margin: auto
@@ -645,6 +649,7 @@ footer {
     }
 
 
+
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -656,6 +661,10 @@ footer {
 
     .cta {
         flex-direction: unset;
+    }
+
+    .schedule {
+        margin: 0;
     }
 
     footer.home-footer, footer.bio-footer {

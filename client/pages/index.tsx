@@ -144,7 +144,7 @@ export default function HomePage({ siteSettings, events }) {
 
 					<section>
 						<div className="cta">
-							<div className="shedule">
+							<div className="schedule">
 								<PopupButton url="https://calendly.com/llukoma/ssanyu-speaks-consultation" text="Schedule a Consultation" />
 							</div>
 							<div className="pre-book">

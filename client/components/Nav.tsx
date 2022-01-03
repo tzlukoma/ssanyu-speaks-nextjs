@@ -54,7 +54,6 @@ export default function Nav() {
                 borderBottom={false}
             >
                 <div className="logo">
-
                     <div className='logo next-image-container'>
                         <Image
                             className="next-image"
