@@ -24,6 +24,7 @@ function BookPage({ siteSettings }) {
                                 {...bookImageProps}
                                 className='next-image '
                                 layout='fill'
+                                placeholder="blur"
                                 alt='ssanyu hero image'
                             />
                         </div>

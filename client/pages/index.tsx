@@ -57,6 +57,7 @@ export default function HomePage({ siteSettings, events }) {
 								{...bookImageProps}
 								className="next-image promo-banner-image"
 								layout="fill"
+								placeholder="blur"
 								alt={`Suubi's sunny smile book`}
 							/>
 						</div>
@@ -123,6 +124,7 @@ export default function HomePage({ siteSettings, events }) {
 										{...heroImageProps}
 										className="next-image "
 										layout="fill"
+										placeholder="blur"
 										alt='ssanyu hero image'
 									/>
 								</div>
@@ -134,6 +136,7 @@ export default function HomePage({ siteSettings, events }) {
 										{...heroImageMobileProps}
 										className="next-image "
 										layout="fill"
+										placeholder="blur"
 										alt='ssanyu hero image'
 									/>
 								</div>

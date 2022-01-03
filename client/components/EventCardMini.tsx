@@ -17,6 +17,7 @@ const EventCardMini
                         {...cardImageProps}
                         className='next-image event-image'
                         layout='fill'
+                        placeholder="blur"
                         alt='event thumbnail'
                     />
                 </div>
