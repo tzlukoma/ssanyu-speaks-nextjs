@@ -29,6 +29,7 @@ function AboutPage({ siteSettings }) {
                                             {...authorImageProps}
                                             className='next-image '
                                             layout='fill'
+                                            placeholder="blur"
                                             alt='ssanyu hero image'
                                         />
                                     </div>
@@ -39,6 +40,7 @@ function AboutPage({ siteSettings }) {
                                             {...authorImageMobileProps}
                                             className='next-image '
                                             layout='fill'
+                                            placeholder="blur"
                                             alt='ssanyu author image'
                                         />
                                     </div>

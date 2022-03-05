@@ -18,6 +18,7 @@ const EventCard = ({ event, emptyCard = false }) => {
                     {...cardImageProps}
                     className='next-image event-image'
                     layout='fill'
+                    placeholder="blur"
                     alt='event thumbnail'
                 />
             </div>

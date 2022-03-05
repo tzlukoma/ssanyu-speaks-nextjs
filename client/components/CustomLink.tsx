@@ -11,11 +11,11 @@ function CustomLink({ children, destination, active, noPadding, borderBottom, cl
     });
     return (
         <Link href={destination} passHref >
-            <div className={linkStyle}>
+            <span className={linkStyle}>
                 <a className={className} style={{ padding: noPadding ? 0 : null }}
                 >{children}
                 </a>
-            </div>
+            </span>
 
         </Link>
     )

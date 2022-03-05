@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import groq from 'groq'
 import { useNextSanityImage } from 'next-sanity-image'
-import { ProductBrowser } from '@ecwid/nextjs-ecwid-plugin'
+import { ProductBrowser, BuyNowButton } from '@ecwid/nextjs-ecwid-plugin'
 import BlockContent from '@sanity/block-content-to-react'
 import { client } from '../lib/sanity'
 import CustomLink from '../components/CustomLink'
@@ -24,6 +24,7 @@ function BookPage({ siteSettings }) {
                                 {...bookImageProps}
                                 className='next-image '
                                 layout='fill'
+                                placeholder="blur"
                                 alt='ssanyu hero image'
                             />
                         </div>
@@ -35,16 +36,21 @@ function BookPage({ siteSettings }) {
                 />
             </section>
             <section className="shipping-notice">
-                <h2>Pre-Order Your Copies Today!</h2>
-                <h3>Books will begin shipping on November 18th</h3>
-                <p>If you would like to order more than 10 books, please <CustomLink className='' destination="/bulk-request-form" noPadding borderBottom={false} active={false} >submit an inquiry.</CustomLink>
-                </p>
-                <div className="embedded-store">
-                    <ProductBrowser
-                        storeId={process.env.NEXT_PUBLIC_ECWID_STORE_ID}
-                    />
+                <h2>Buy The Bundle Exclusive (Book + Coloring Book)</h2>
+                <h3>Only Available on This Site</h3>
+                <div className="buy-button">
+                    <Image src={'/suubi-sunny-smile-bundle.png'} width={600} height={404} alt={`Suubi's Sunny Smile bundle - both books`} />
+                    <CustomLink
+                        className=""
+                        destination={'https://store66207749.company.site/products/Suubis-Sunny-Smile-Coloring-Book-Bundle-p400650737'} noPadding active={false} borderBottom={false}>
+                        <button>Buy the Bundle</button>
+                    </CustomLink>
                 </div>
-
+                <h2>Want to Buy Just the Book?</h2>
+                <h2 style={{ margin: 0, fontSize: '1.5em' }}>Buy it at <span> <CustomLink className='' destination="/where-to-buy" noPadding borderBottom={true} active={false} >these locations.</CustomLink></span></h2>
+                <h2>Want to Buy In Bulk?</h2>
+                <p>If you would like to order more than 10 books at our bulk discount, please <CustomLink className='' destination="/bulk-request-form" noPadding borderBottom={false} active={false} >submit an inquiry.</CustomLink>
+                </p>
             </section>
         </div>
     )

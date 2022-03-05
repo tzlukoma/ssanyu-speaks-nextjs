@@ -57,22 +57,12 @@ export default function HomePage({ siteSettings, events }) {
 								{...bookImageProps}
 								className="next-image promo-banner-image"
 								layout="fill"
+								placeholder="blur"
 								alt={`Suubi's sunny smile book`}
 							/>
 						</div>
-						<h2>Pre-Order My New Book</h2>
+						<h2>Order My New Book</h2>
 					</CustomLink>
-					<div style={{ textAlign: 'center', }}>
-						<CustomLink
-							className=''
-							destination={'https://www.eventbrite.com/e/suubis-sunny-smile-book-launch-tickets-196856482037'}
-							noPadding
-							borderBottom={false}
-							active={false}
-						>
-							<button style={{ cursor: 'pointer' }}>Register for My Book Launch!!</button>
-						</CustomLink>
-					</div>
 					{
 						sortedEvents?.length > 0 ? (
 							<>
@@ -134,6 +124,7 @@ export default function HomePage({ siteSettings, events }) {
 										{...heroImageProps}
 										className="next-image "
 										layout="fill"
+										placeholder="blur"
 										alt='ssanyu hero image'
 									/>
 								</div>
@@ -145,6 +136,7 @@ export default function HomePage({ siteSettings, events }) {
 										{...heroImageMobileProps}
 										className="next-image "
 										layout="fill"
+										placeholder="blur"
 										alt='ssanyu hero image'
 									/>
 								</div>
@@ -155,7 +147,7 @@ export default function HomePage({ siteSettings, events }) {
 
 					<section>
 						<div className="cta">
-							<div className="shedule">
+							<div className="schedule">
 								<PopupButton url="https://calendly.com/llukoma/ssanyu-speaks-consultation" text="Schedule a Consultation" />
 							</div>
 							<div className="pre-book">
