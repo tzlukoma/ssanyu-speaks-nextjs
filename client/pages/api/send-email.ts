@@ -26,7 +26,7 @@ async function sendEmail(req, res) {
     try {
 
         const emailBody = {
-            to: ['tzlukoma@gmail.com, ssanyuspeaks@gmail.com, llukoma@gmail.com'],
+            to: ['tzlukoma@gmail.com, ssanyuspeaks@gmail.com, llukoma@gmail.com,tzlukoma+bnqnd6l6kmeqpiejnqjv@boards.trello.com'],
             from: 'tzlukoma@morethanahut.com',
             subject: `'New Bulk Order from ${firstName} ${lastName} - ${organization}'`,
             html: `
