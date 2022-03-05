@@ -2,8 +2,8 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 
-const ErrorMessage = ({ message }) => <div style={{ color: 'white' }}>{message}</div>
-const SuccessMessage = () => <div style={{ border: '1px solid white', borderRadius: '5px', padding: '2em', color: 'white' }}>Your request was submitted successfully.</div>
+const ErrorMessage = ({ message }) => <div style={{ color: 'brown' }}>{message}</div>
+const SuccessMessage = () => <div style={{ border: '1px solid brown', borderRadius: '5px', padding: '2em', color: 'brown' }}>Your request was submitted successfully.</div>
 
 function BulkRequestFormPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
