@@ -3,9 +3,12 @@ import {
   QueryClient,
   QueryClientProvider,
 } from 'react-query'
+import LogRocket from 'logrocket';
 import '../styles/main.css'
 import '../styles/normalize.css'
 import '../styles/style.css'
+
+LogRocket.init('dqnqop/ssanyuspeakscom');
 
 const queryClient = new QueryClient()
 
