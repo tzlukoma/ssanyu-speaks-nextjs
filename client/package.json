@@ -20,7 +20,7 @@
     "classnames": "^2.3.1",
     "date-fns": "^2.25.0",
     "dompurify": "^2.3.3",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^6.2.8",
     "groq": "^2.15.0",
     "isomorphic-unfetch": "^3.1.0",
     "jstimezonedetect": "^1.0.7",

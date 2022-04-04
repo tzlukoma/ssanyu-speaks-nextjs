@@ -14,8 +14,6 @@ function EventsPage({ upcomingEvents, pastEvents }) {
         const firstItem: any = new Date(b.date)
         return firstItem - secondItem;
     });
-    console.log(sortedUpcomingEvents)
-    console.log(sortedPastEvents)
     return (
         <div className='sm:w-2/3 lg:w-1/2 m-auto grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-1 p-5 font-sans'>
             <div className='space-y-3 text-xl'>

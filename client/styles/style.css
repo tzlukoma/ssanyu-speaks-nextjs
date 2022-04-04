@@ -457,6 +457,18 @@ footer {
     justify-self: 'center'
 }
 
+.gallery-grid {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem; */
+    width: 100%
+}
+
+.gallery-image-container {
+    --gallery-image-width: 15rem;
+    width: var(--gallery-image-width);
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -604,9 +616,61 @@ footer {
     font-size: 1rem;
 }
 
+/* image grid styles */
+
+.img-grid {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.img-wrap {
+    overflow: hidden;
+    height: 0;
+    padding: 50% 0;
+    /* padding controls height, will always be perfectly square regardless of width */
+    position: relative;
+    opacity: 0.8;
+}
+
+.img-wrap img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 150%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* modal styles */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop img {
+    --backdrop-width: 50%;
+    display: block;
+    max-width: var(--backdrop-width);
+    /* max-height: 80%; */
+    margin: 60px auto;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+}
+
 /* Small devices - greater than 576px */
 
 @media (min-width: 575.98px) {
+    .backdrop img {
+        --backdrop-width: 30%;
+    }
+
     .event-wrapper {
         --template-cols: 1fr 1fr;
     }
@@ -648,6 +712,10 @@ footer {
     .buy-button button {
         width: 100%;
         margin-left: 0px
+    }
+
+    .gallery-image-container {
+        --gallery-image-width: 30rem;
     }
 }
 

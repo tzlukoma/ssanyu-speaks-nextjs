@@ -27,6 +27,10 @@ export default function Nav() {
         {
             name: 'Events',
             link: '/events'
+        },
+        {
+            name: 'Galleries',
+            link: '/gallery'
         }
     ]
 

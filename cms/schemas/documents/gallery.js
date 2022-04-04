@@ -12,6 +12,19 @@ export default {
 			type: 'string',
 		},
 		{
+			title: 'Slug',
+			name: 'slug',
+			type: 'slug',
+			options: {
+				source: 'title',
+			},
+		},
+		{
+			title: 'Cover Image',
+			name: 'coverImage',
+			type: 'image',
+		},
+		{
 			name: 'images',
 			type: 'array', // supports drag'n'drop of multiple files
 			options: {
