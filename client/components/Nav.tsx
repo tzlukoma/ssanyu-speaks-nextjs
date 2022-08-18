@@ -65,9 +65,6 @@ export default function Nav() {
                             src={logo}
                             alt='brand logo'
                             layout="fill"
-                            placeholder="blur"
-                            blurDataURL='https://via.placeholder.com/900x200/e8e8e8/000000?text=I+Dream,+I+Speak,+I+Inspire
-                            '
                         />
                     </div>
                 </div>
