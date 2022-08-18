@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import CustomLink from './CustomLink'
+import logo from './ssanyu-speaks-logo-new-for-blur.png'
 
 export default function Nav() {
     const router = useRouter()
@@ -61,9 +62,12 @@ export default function Nav() {
                     <div className='logo next-image-container'>
                         <Image
                             className="next-image"
-                            src='/ssanyu-speaks-logo-new.svg'
+                            src={logo}
                             alt='brand logo'
                             layout="fill"
+                            placeholder="blur"
+                            blurDataURL='https://via.placeholder.com/900x200/e8e8e8/000000?text=I+Dream,+I+Speak,+I+Inspire
+                            '
                         />
                     </div>
                 </div>
