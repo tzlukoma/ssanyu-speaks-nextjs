@@ -4,8 +4,10 @@ import groq from 'groq'
 import { useNextSanityImage } from 'next-sanity-image'
 import BlockContent from '@sanity/block-content-to-react'
 import { client } from '../lib/sanity'
+import ReactPlayer from 'react-player'
 
-function AboutPage({ siteSettings }) {
+function AboutPage({ siteSettings, siteVideoLong }) {
+    const { videoUrl } = siteVideoLong[0]
     const authorImageProps = useNextSanityImage(
         client,
         siteSettings[0]?.authorImage
@@ -20,6 +22,14 @@ function AboutPage({ siteSettings }) {
             <main>
                 <article className='main-content'>
                     <h1>Who is Ssanyu?</h1>
+                    <ReactPlayer
+                        style={{ marginBottom: "3rem" }}
+                        controls={true}
+                        width="100%"
+                        height="100%"
+                        loading="lazy"
+                        url={videoUrl}
+                    />
                     <section className='hero bio-hero'>
                         <div className='bio-container'>
                             <div className='image-container'>
@@ -63,13 +73,21 @@ function AboutPage({ siteSettings }) {
 export default AboutPage
 
 AboutPage.getInitialProps = async ctx => {
-    const siteSettings = await client
-        .fetch(
-            groq`
-	*[_type=="siteSettings"] 
-	`
-        )
-        .catch(console.error)
+    const [siteSettings, siteVideoLong] = await Promise.all([
+        client
+            .fetch(
+                groq`
+	                *[_type=="siteSettings"] 
+	                `
+            )
+            .catch(console.error),
+        client
+            .fetch(
+                groq`
+                *[_type=="siteSettings"]{'videoUrl':sizzleVideoLong.asset->url}`
+            )
+            .catch(console.error)
+    ])
 
-    return { siteSettings }
+    return { siteSettings, siteVideoLong }
 }

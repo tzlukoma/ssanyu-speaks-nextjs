@@ -20,6 +20,16 @@ export default {
 			},
 		},
 		{
+			title: 'Sizzle Video',
+			name: 'sizzleVideo',
+			type: 'file'
+		},
+		{
+			title: 'Sizzle Video - Long',
+			name: 'sizzleVideoLong',
+			type: 'file'
+		},
+		{
 			title: 'Hero Image - Mobile',
 			name: 'heroImageMobile',
 			type: 'image',

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import ReactPlayer from 'react-player';
 import { PopupButton } from "react-calendly";
 import { compareAsc, parseISO, } from 'date-fns'
 import { client } from '../lib/sanity'
@@ -9,7 +10,8 @@ import CustomLink from '../components/CustomLink'
 import EventCardMini from '../components/EventCardMini'
 import { Subscribe } from '../components/Subscribe';
 
-export default function HomePage({ siteSettings, events }) {
+export default function HomePage({ siteSettings, siteVideo, events }) {
+	const { videoUrl } = siteVideo[0]
 	const heroImageProps = useNextSanityImage(client, siteSettings[0].heroImage)
 	const heroImageMobileProps = useNextSanityImage(
 		client,
@@ -43,26 +45,16 @@ export default function HomePage({ siteSettings, events }) {
 
 			<main >
 				<article className="main-content">
-					<CustomLink
-						className="promo-banner"
-						destination={'/suubis-sunny-smile'}
-						active={false}
-						noPadding={true}
-						borderBottom={false}
-					>
+					<h2 className="greeting">{`Hi, I'm Ssanyu (which means "Joy")`}</h2>
+					<ReactPlayer
+						style={{ marginBottom: "3rem" }}
+						controls={true}
+						width="100%"
+						height="100%"
+						loading="lazy"
+						url={videoUrl}
+					/>
 
-						<div className="next-image-container" style={{ marginRight: 20 }}>
-
-							<Image
-								{...bookImageProps}
-								className="next-image promo-banner-image"
-								layout="fill"
-								placeholder="blur"
-								alt={`Suubi's sunny smile book`}
-							/>
-						</div>
-						<h2>Order My New Book</h2>
-					</CustomLink>
 					{
 						sortedEvents?.length > 0 ? (
 							<>
@@ -71,7 +63,7 @@ export default function HomePage({ siteSettings, events }) {
 						) : null
 					}
 
-					<h2 className="greeting">{`Hi, I'm Ssanyu (which means "Joy")`}</h2>
+
 					<section className="hero">
 						<div className="card-container">
 							{/* <!-- <h2>cards</h2> --> */}
@@ -167,7 +159,7 @@ export default function HomePage({ siteSettings, events }) {
 }
 
 HomePage.getInitialProps = async ctx => {
-	const [siteSettings, events] = await Promise.all([
+	const [siteSettings, siteVideo, events] = await Promise.all([
 		client
 			.fetch(
 				groq`
@@ -177,9 +169,15 @@ HomePage.getInitialProps = async ctx => {
 		client
 			.fetch(
 				groq`
+			*[_type=="siteSettings"]{'videoUrl':sizzleVideo.asset->url}`
+			)
+			.catch(console.error),
+		client
+			.fetch(
+				groq`
 			*[_type =="event" && status == "scheduled"]`
 			)
 			.catch(console.error)
 	])
-	return { siteSettings, events }
+	return { siteSettings, siteVideo, events }
 }
