@@ -12,6 +12,14 @@ export default {
 			type: 'string',
 		},
 		{
+			title: 'Logo Image',
+			name: 'logoImage',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+		},
+		{
 			title: 'Hero Image',
 			name: 'heroImage',
 			type: 'image',
@@ -28,6 +36,14 @@ export default {
 			title: 'Sizzle Video - Long',
 			name: 'sizzleVideoLong',
 			type: 'file'
+		},
+		{
+			title: 'Video Cover Image',
+			name: 'videoCover',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
 		},
 		{
 			title: 'Hero Image - Mobile',

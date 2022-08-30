@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import CustomLink from './CustomLink'
-import logo from './ssanyu-speaks-logo-new-for-blur.png'
 
 export default function Nav() {
     const router = useRouter()
@@ -62,7 +61,7 @@ export default function Nav() {
                     <div className='logo next-image-container'>
                         <Image
                             className="next-image"
-                            src={logo}
+                            src={"https://cdn.sanity.io/images/boechal1/production/2a4902657d129e7ac41709cd6b5ed615286ddd79-1376x392.png"}
                             alt='brand logo'
                             layout="fill"
                         />
