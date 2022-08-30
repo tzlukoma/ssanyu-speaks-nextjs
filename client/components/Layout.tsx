@@ -5,7 +5,7 @@ import Nav from './Nav'
 function Layout({ children, logoImageData }) {
     return (
         <div className='layout-wrapper'>
-            <Nav logoImageData={logoImageData} />
+            <Nav />
             <div style={{ paddingBottom: "12em" }}>
                 <div className='layout'>
                     {children}

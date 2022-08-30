@@ -2,12 +2,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import CustomLink from './CustomLink'
-import { useNextSanityImage } from 'next-sanity-image'
-import { client } from '../lib/sanity'
 
-export default function Nav({ logoImageData }) {
-    const logoImageProps = useNextSanityImage(client, logoImageData)
-    console.log("logoImageProps", logoImageProps)
+export default function Nav() {
 
     const router = useRouter()
     const [menuOpen, setMenuOpen] = useState(false)
@@ -65,11 +61,12 @@ export default function Nav({ logoImageData }) {
                 <div className="logo">
                     <div className='logo next-image-container'>
                         <Image
-                            {...logoImageProps}
-                            className="next-image "
+                            className="next-image"
+                            src={"https://cdn.sanity.io/images/boechal1/production/2a4902657d129e7ac41709cd6b5ed615286ddd79-1376x392.png"}
+                            blurDataURL={"https://cdn.sanity.io/images/boechal1/production/2a4902657d129e7ac41709cd6b5ed615286ddd79-1376x392.png?w=64&blur=50&q=30&fit=clip&auto=format"}
+                            placeholder="blur"
+                            alt='brand logo'
                             layout="fill"
-                            placeholder='blur'
-                            alt='ssanyu hero image'
                         />
                     </div>
                 </div>

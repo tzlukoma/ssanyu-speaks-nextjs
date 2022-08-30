@@ -16,20 +16,7 @@ LogRocket.init('dqnqop/ssanyuspeakscom');
 const queryClient = new QueryClient()
 
 function MyApp({ Component, pageProps }) {
-  const logoImageData = pageProps.siteSettings[0].logoImage
-  return (<QueryClientProvider client={queryClient}><Layout logoImageData={logoImageData}><Component {...pageProps} /></Layout></QueryClientProvider>)
+  return (<QueryClientProvider client={queryClient}><Layout ><Component {...pageProps} /></Layout></QueryClientProvider>)
 }
 
 export default MyApp
-
-MyApp.getInitialProps = async appContext => {
-  const pageProps = await App.getInitialProps(appContext)
-  const [logoImageData] = await Promise.all([
-    client
-      .fetch(
-        groq`
-			*[_type=="siteSettings"]`
-      )
-      .catch(console.error)])
-  return { ...pageProps, logoImageData }
-}
